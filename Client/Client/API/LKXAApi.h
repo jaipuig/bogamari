@@ -31,8 +31,7 @@ enum types {
 - (void)registerUserWithUserName:(NSString *)userName password:(NSString *)password name:(NSString *)name lastName:(NSString *)lastName andAddress:(NSDictionary *)address;
 - (void)loginWithUser:(NSString *)user andPassword:(NSString *)password;
 
-- (void)clientPaymentWithIdCard:(NSString *)idCard code:(NSString *)code forValue:(double) value;
-
+- (void)clientPaymentWithIdCard:(NSString *)idCard code:(NSString *)code forValue:(double) value withToken:(NSString *) token;
 //- (void)commerceBilling:
 
 @end

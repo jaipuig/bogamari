@@ -151,7 +151,7 @@
      */
 }
 
-- (void)clientPaymentWithIdCard:(NSString *)idCard code:(NSString *)code forValue:(double) value{
+- (void)clientPaymentWithIdCard:(NSString *)idCard code:(NSString *)code forValue:(double) value withToken:(NSString *) token{
 
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
     
@@ -163,7 +163,7 @@
         NSString *functionWithParameters = [NSString stringWithFormat:@"%@%@", function, parameters];
         
         //NSURL *finalURL = [NSURL URLWithString:[self composeURLWithFunction:functionWithParameters andToken:@""]];
-        NSURL *finalURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://finappsapi.bdigital.org/api/2012/%@/%@", API_KEY, functionWithParameters]];
+        NSURL *finalURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://finappsapi.bdigital.org/api/2012/%@%@/%@", API_KEY, token, functionWithParameters]];
         
         NSLog(@"finalURL: %@", finalURL);
         
@@ -187,7 +187,6 @@
             NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
             
             NSLog(@"jsonData: %@", jsonData);
-            NSLog(@"Token: %@", [jsonData objectForKey:@"token"]);
             
             [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                 if (!error) {
