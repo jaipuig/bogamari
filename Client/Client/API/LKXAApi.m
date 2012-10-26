@@ -72,7 +72,8 @@
         NSString *parameters = [NSString stringWithFormat:@"?user=%@&password=%@", user, password];
         NSString *functionWithParameters = [NSString stringWithFormat:@"%@%@", function, parameters];
         
-        NSURL *finalURL = [NSURL URLWithString:[self composeURLWithFunction:functionWithParameters andToken:@""]];
+        //NSURL *finalURL = [NSURL URLWithString:[self composeURLWithFunction:functionWithParameters andToken:@""]];
+        NSURL *finalURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@:%@@finappsapi.bdigital.org/api/2012/%@/%@", user, password, API_KEY, functionWithParameters]];
         
         NSLog(@"finalURL: %@", finalURL);
         
@@ -96,6 +97,7 @@
             NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
             
             NSLog(@"jsonData: %@", jsonData);
+            NSLog(@"Token: %@", [jsonData objectForKey:@"token"]);
             
             [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                 if (!error) {
