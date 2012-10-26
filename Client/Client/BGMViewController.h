@@ -7,8 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <QuartzCore/QuartzCore.h>
-
 
 #import "LKXAApi.h"
 
