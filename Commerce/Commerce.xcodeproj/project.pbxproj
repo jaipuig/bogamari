@@ -33,6 +33,20 @@
 			remoteGlobalIDString = 2100C57B163AD0D700D202E9;
 			remoteInfo = Commerce;
 		};
+		72A1069D163B0E490012959C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72A10695163B0E490012959C /* ZXingWidget.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = ZXingWidget;
+		};
+		72A1069F163B0E490012959C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72A10695163B0E490012959C /* ZXingWidget.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D60398D13DF7CAD006F4B51;
+			remoteInfo = ZXingTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +72,7 @@
 		2100C5AE163AD0D800D202E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2100C5B0163AD0D800D202E9 /* CommerceTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommerceTests.h; sourceTree = "<group>"; };
 		2100C5B1163AD0D800D202E9 /* CommerceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommerceTests.m; sourceTree = "<group>"; };
+		72A10695163B0E490012959C /* ZXingWidget.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZXingWidget.xcodeproj; path = ../ThirdPartyLibraries/ZXingWidget/ZXingWidget.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +102,7 @@
 		2100C571163AD0D700D202E9 = {
 			isa = PBXGroup;
 			children = (
+				72A10695163B0E490012959C /* ZXingWidget.xcodeproj */,
 				2100C586163AD0D700D202E9 /* Commerce */,
 				2100C5AA163AD0D800D202E9 /* CommerceTests */,
 				2100C57F163AD0D700D202E9 /* Frameworks */,
@@ -160,6 +176,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		72A10696163B0E490012959C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				72A1069E163B0E490012959C /* libZXingWidget.a */,
+				72A106A0163B0E490012959C /* ZXingTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -219,6 +244,12 @@
 			mainGroup = 2100C571163AD0D700D202E9;
 			productRefGroup = 2100C57D163AD0D700D202E9 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 72A10696163B0E490012959C /* Products */;
+					ProjectRef = 72A10695163B0E490012959C /* ZXingWidget.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2100C57B163AD0D700D202E9 /* Commerce */,
@@ -226,6 +257,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		72A1069E163B0E490012959C /* libZXingWidget.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libZXingWidget.a;
+			remoteRef = 72A1069D163B0E490012959C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		72A106A0163B0E490012959C /* ZXingTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ZXingTests.octest;
+			remoteRef = 72A1069F163B0E490012959C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2100C57A163AD0D700D202E9 /* Resources */ = {
@@ -449,6 +497,7 @@
 				2100C5B7163AD0D800D202E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2100C5B8163AD0D800D202E9 /* Build configuration list for PBXNativeTarget "CommerceTests" */ = {
 			isa = XCConfigurationList;
@@ -457,6 +506,7 @@
 				2100C5BA163AD0D800D202E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
