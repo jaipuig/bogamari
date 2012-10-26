@@ -36,6 +36,7 @@
 		2100C69C163B01B400D202E9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2100C69B163B01B400D202E9 /* SystemConfiguration.framework */; };
 		2100C69E163B01CF00D202E9 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2100C69D163B01CF00D202E9 /* MobileCoreServices.framework */; };
 		7E1618A7163B341E001D47EA /* libQREncoder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E1618A3163B3416001D47EA /* libQREncoder.a */; };
+		7EB9AD85163B41FF00EC156E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB9AD84163B41FF00EC156E /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,7 @@
 		2100C69B163B01B400D202E9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		2100C69D163B01CF00D202E9 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		7E16189A163B3415001D47EA /* QREncoder.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QREncoder.xcodeproj; path = ../ThirdPartyLibraries/ObjQREncoder/src/QREncoder.xcodeproj; sourceTree = "<group>"; };
+		7EB9AD84163B41FF00EC156E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EB9AD85163B41FF00EC156E /* QuartzCore.framework in Frameworks */,
 				7E1618A7163B341E001D47EA /* libQREncoder.a in Frameworks */,
 				2100C69E163B01CF00D202E9 /* MobileCoreServices.framework in Frameworks */,
 				2100C69C163B01B400D202E9 /* SystemConfiguration.framework in Frameworks */,
@@ -168,6 +171,7 @@
 		2100C5C9163AD0FA00D202E9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7EB9AD84163B41FF00EC156E /* QuartzCore.framework */,
 				2100C69D163B01CF00D202E9 /* MobileCoreServices.framework */,
 				2100C69B163B01B400D202E9 /* SystemConfiguration.framework */,
 				2100C5CA163AD0FA00D202E9 /* UIKit.framework */,
@@ -527,6 +531,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Client/Client-Prefix.pch";
+				HEADER_SEARCH_PATHS = ../ThirdPartyLibraries/ObjQREncoder/src/Classes;
 				INFOPLIST_FILE = "Client/Client-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -538,6 +543,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Client/Client-Prefix.pch";
+				HEADER_SEARCH_PATHS = ../ThirdPartyLibraries/ObjQREncoder/src/Classes;
 				INFOPLIST_FILE = "Client/Client-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

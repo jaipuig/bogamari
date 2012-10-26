@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <QuartzCore/QuartzCore.h>
+
 #import "LKXAApi.h"
 
 @interface BGMViewController : UIViewController <LKXAApiDelegate>
 
 @property (strong, nonatomic)LKXAApi *api;
+- (IBAction)payButtonPressed:(id)sender;
 
 @end

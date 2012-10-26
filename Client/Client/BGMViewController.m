@@ -6,6 +6,11 @@
 //  Copyright (c) 2012 bogamari. All rights reserved.
 //
 #import "BGMViewController.h"
+#import <QREncoder/QREncoder.h>
+#import <QuartzCore/QuartzCore.h>
+
+static const CGFloat kPadding = 10;
+
 
 @interface BGMViewController ()
 
@@ -63,4 +68,18 @@
     
 }
 
+- (IBAction)payButtonPressed:(id)sender {
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+	UIImage* image = [QREncoder encode:@"http://www.desfici.com"];
+    
+	UIImageView* imageView = [[UIImageView alloc] initWithImage:image];
+    CGFloat qrSize = self.view.bounds.size.width - kPadding * 2;
+	imageView.frame = CGRectMake(kPadding, (self.view.bounds.size.height - qrSize) / 2,
+                                 qrSize, qrSize);
+	[imageView layer].magnificationFilter = kCAFilterNearest;
+    
+	[self.view addSubview:imageView];
+
+}
 @end
