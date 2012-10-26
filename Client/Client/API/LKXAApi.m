@@ -61,6 +61,7 @@
 
 - (void)loginWithUser:(NSString *)user andPassword:(NSString *)password {
     
+    /*
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
     
     [queue setName:@"Perform request"];
@@ -105,7 +106,44 @@
             }];
         }
     }];
+    */
     
+    NSURL *url = [NSURL URLWithString:[self composeURLWithFunction:@"" andToken:nil]];
+    
+    NSString *function = @"access/login";
+    
+    NSMutableDictionary *parameters = [[NSMutableDictionary alloc] init];
+    [parameters setObject:user forKey:@"user"];
+    [parameters setObject:password forKey:@"password"];
+    
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
+    //[httpClient setParameterEncoding:AFJSONParameterEncoding];
+    
+    NSMutableURLRequest *request = [httpClient requestWithMethod:@"GET" path:function parameters:parameters];
+    
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        
+        //NSLog(@"JSON: %@", JSON);
+        
+        NSError *errorSerializing;
+        NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:JSON options:kNilOptions error:&errorSerializing];
+        
+        if (errorSerializing) {
+            NSLog(@"Error serializing JSON!");
+        }
+        else {
+            [self.delegate requestSucceededWithResponse:jsonData forType:kApiRegister];
+        }
+        
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        
+        //NSLog(@"Error: %@", error.description);
+        
+        [self.delegate requestFailedWithError:error forType:kApiRegister];
+        
+    }];
+    
+    [operation start];
 }
 
 #pragma mark - private
