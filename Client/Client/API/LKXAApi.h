@@ -7,8 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AFNetworking.h"
 
-@interface LKXAApi : NSObject
+#define BASE_URL @"http://finappsapi.bdigital.org/api/2012/"
+#define API_KEY @"adcfbc8183/"
+
+@interface LKXAApi : AFHTTPClient
 
 - (void)registerUserWithUserName:(NSString *)userName password:(NSString *)password name:(NSString *)name lastName:(NSString *)lastName andAddress:(NSDictionary *)address;
 

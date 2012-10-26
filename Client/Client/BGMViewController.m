@@ -18,6 +18,17 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.api = [[LKXAApi alloc] init];
+    
+    NSMutableDictionary *address = [[NSMutableDictionary alloc] init];
+    [address setObject:@"street" forKey:@"Bogamarí St."];
+    [address setObject:@"number" forKey:@"6"];
+    [address setObject:@"city" forKey:@"Xàbia"];
+    [address setObject:@"postalCode" forKey:@"03730"];
+    [address setObject:@"country" forKey:@"Spain"];
+    
+    [self.api registerUserWithUserName:@"dadederk" password:@"dadederk" name:@"Dani" lastName:@"Devesa" andAddress:address];
 }
 
 - (void)didReceiveMemoryWarning

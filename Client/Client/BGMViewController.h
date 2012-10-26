@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#import "LKXAApi.h"
+
 @interface BGMViewController : UIViewController
+
+@property (strong, nonatomic)LKXAApi *api;
 
 @end
