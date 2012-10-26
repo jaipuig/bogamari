@@ -23,6 +23,7 @@
 		2100C5F1163AD0FA00D202E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2100C5CC163AD0FA00D202E9 /* Foundation.framework */; };
 		2100C5F9163AD0FA00D202E9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2100C5F7163AD0FA00D202E9 /* InfoPlist.strings */; };
 		2100C5FC163AD0FA00D202E9 /* ClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2100C5FB163AD0FA00D202E9 /* ClientTests.m */; };
+		2100C671163AF9FB00D202E9 /* LKXAApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 2100C670163AF9FB00D202E9 /* LKXAApi.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		2100C5F8163AD0FA00D202E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2100C5FA163AD0FA00D202E9 /* ClientTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClientTests.h; sourceTree = "<group>"; };
 		2100C5FB163AD0FA00D202E9 /* ClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClientTests.m; sourceTree = "<group>"; };
+		2100C66F163AF9FB00D202E9 /* LKXAApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKXAApi.h; sourceTree = "<group>"; };
+		2100C670163AF9FB00D202E9 /* LKXAApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKXAApi.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,7 @@
 		2100C5D0163AD0FA00D202E9 /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				2100C66D163AF98400D202E9 /* API */,
 				2100C5D9163AD0FA00D202E9 /* BGMAppDelegate.h */,
 				2100C5DA163AD0FA00D202E9 /* BGMAppDelegate.m */,
 				2100C5E2163AD0FA00D202E9 /* MainStoryboard.storyboard */,
@@ -158,6 +162,15 @@
 				2100C5F7163AD0FA00D202E9 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2100C66D163AF98400D202E9 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				2100C66F163AF9FB00D202E9 /* LKXAApi.h */,
+				2100C670163AF9FB00D202E9 /* LKXAApi.m */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +287,7 @@
 				2100C5D7163AD0FA00D202E9 /* main.m in Sources */,
 				2100C5DB163AD0FA00D202E9 /* BGMAppDelegate.m in Sources */,
 				2100C5E7163AD0FA00D202E9 /* BGMViewController.m in Sources */,
+				2100C671163AF9FB00D202E9 /* LKXAApi.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +461,7 @@
 				2100C601163AD0FA00D202E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2100C602163AD0FA00D202E9 /* Build configuration list for PBXNativeTarget "ClientTests" */ = {
 			isa = XCConfigurationList;
@@ -455,6 +470,7 @@
 				2100C604163AD0FA00D202E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
