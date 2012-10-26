@@ -36,7 +36,7 @@
     
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         
-        //NSLog(@"JSON: %@", JSON);
+        NSLog(@"JSON: %@", JSON);
         
         NSError *errorSerializing;
         NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:JSON options:kNilOptions error:&errorSerializing];
@@ -61,7 +61,8 @@
 
 - (void)loginWithUser:(NSString *)user andPassword:(NSString *)password {
     
-    /*
+    
+    //Metodo 1
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
     
     [queue setName:@"Perform request"];
@@ -106,8 +107,9 @@
             }];
         }
     }];
-    */
     
+    /*
+    //Metodo 2
     NSURL *url = [NSURL URLWithString:[self composeURLWithFunction:@"" andToken:nil]];
     
     NSString *function = @"access/login";
@@ -144,6 +146,7 @@
     }];
     
     [operation start];
+     */
 }
 
 #pragma mark - private

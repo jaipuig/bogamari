@@ -31,7 +31,7 @@
     [address setObject:@"country" forKey:@"Spain"];
     
     [self.api registerUserWithUserName:@"dadederk" password:@"dadederk" name:@"Dani" lastName:@"Devesa" andAddress:address];
-     */
+    */
     
     //Login example
     
