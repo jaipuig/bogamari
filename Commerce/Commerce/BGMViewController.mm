@@ -8,24 +8,24 @@
 
 #import "BGMViewController.h"
 
+//
+//#ifndef ZXQR
+//#define ZXQR 1
+//#endif
+//
+//#if ZXQR
+//#import "QRCodeReader.h"
+//#endif
+//
+//#ifndef ZXAZ
+//#define ZXAZ 0
+//#endif
+//
+//#if ZXAZ
+//#import "AztecReader.h"
+//#endif
 
-#ifndef ZXQR
-#define ZXQR 1
-#endif
-
-#if ZXQR
-#import "QRCodeReader.h"
-#endif
-
-#ifndef ZXAZ
-#define ZXAZ 0
-#endif
-
-#if ZXAZ
-#import "AztecReader.h"
-#endif
-
-using namespace zxing;
+//using namespace zxing;
 
 @interface BGMViewController ()
 
@@ -37,6 +37,8 @@ using namespace zxing;
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    capturedQRInfo = nil;
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,8 +63,11 @@ using namespace zxing;
                    config: ZBAR_CFG_ENABLE
                        to: 0];
     
+    reader.modalPresentationStyle = UIModalPresentationPageSheet;
+    
     // present and release the controller
-    [self presentModalViewController: reader animated: YES];
+    //[self presentModalViewController: reader animated: YES];
+    [self presentViewController:reader animated:YES completion:nil];
 }
 
 
@@ -79,23 +84,15 @@ using namespace zxing;
         hiddenData = [NSString stringWithString:symbol.data];
     
     if(hiddenData != nil)
+    {
         NSLog(@"QR decodificado!!! %@",hiddenData);
+        capturedQRInfo = hiddenData;
+    }
     
-    // EXAMPLE: just grab the first barcode
-    //  break;
+    // cerrar ventana
+    [self dismissViewControllerAnimated:YES completion:nil];
     
-    // EXAMPLE: do something useful with the barcode data
-    //resultText.text = symbol.data;
-    //resultTextView.text=symbol.data;
-    
-//    
-//    NSLog(@"BARCODE= %@",symbol.data);
-//    
-//    NSUserDefaults *storeData=[NSUserDefaults standardUserDefaults];
-//    [storeData setObject:hiddenData forKey:@"CONSUMERID"];
-//    NSLog(@"SYMBOL : %@",hiddenData);
-//    resultTextView.text=hiddenData;
-//    [reader dismissModalViewControllerAnimated: NO];
+    //
     
 }
 

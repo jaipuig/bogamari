@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-#import "ZXingWidgetController.h"
 #import "ZBarSDK.h"
 
 @interface BGMViewController : UIViewController <UIImagePickerControllerDelegate,ZBarReaderDelegate>{
     
     IBOutlet UITextView *resultTextView;
+    
+    @private
+        NSString* capturedQRInfo; // dnd se guarda la info del qr code cuando se encuentra
 }
 - (IBAction)ScanQRButtonTouch:(id)sender;
 
