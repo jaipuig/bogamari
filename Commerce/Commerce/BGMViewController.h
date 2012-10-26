@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BGMViewController : UIViewController
+#import "ZXingWidgetController.h"
+#import "ZBarSDK.h"
+
+@interface BGMViewController : UIViewController <UIImagePickerControllerDelegate,ZBarReaderDelegate>{
+    
+    IBOutlet UITextView *resultTextView;
+}
+- (IBAction)ScanQRButtonTouch:(id)sender;
 
 @end
