@@ -35,6 +35,7 @@
 		2100C69A163AFDC500D202E9 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 2100C691163AFDC500D202E9 /* UIImageView+AFNetworking.m */; };
 		2100C69C163B01B400D202E9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2100C69B163B01B400D202E9 /* SystemConfiguration.framework */; };
 		2100C69E163B01CF00D202E9 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2100C69D163B01CF00D202E9 /* MobileCoreServices.framework */; };
+		7E161882163B23EB001D47EA /* libQREncoder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E16187C163B2398001D47EA /* libQREncoder.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2100C5C5163AD0FA00D202E9;
 			remoteInfo = Client;
+		};
+		7E16187B163B2398001D47EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E161873163B2398001D47EA /* QREncoder.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = QREncoder;
+		};
+		7E16187D163B2398001D47EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E161873163B2398001D47EA /* QREncoder.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EB7DA3AE10A4F5D90071984A;
+			remoteInfo = QREncoderTest;
+		};
+		7E161880163B23D7001D47EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E161873163B2398001D47EA /* QREncoder.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = QREncoder;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -93,6 +115,7 @@
 		2100C691163AFDC500D202E9 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		2100C69B163B01B400D202E9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		2100C69D163B01CF00D202E9 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		7E161873163B2398001D47EA /* QREncoder.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QREncoder.xcodeproj; path = ../ThirdPartyLibraries/ObjQREncoder/src/QREncoder.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E161882163B23EB001D47EA /* libQREncoder.a in Frameworks */,
 				2100C69E163B01CF00D202E9 /* MobileCoreServices.framework in Frameworks */,
 				2100C69C163B01B400D202E9 /* SystemConfiguration.framework in Frameworks */,
 				2100C5CB163AD0FA00D202E9 /* UIKit.framework in Frameworks */,
@@ -124,6 +148,7 @@
 		2100C5BB163AD0FA00D202E9 = {
 			isa = PBXGroup;
 			children = (
+				7E161873163B2398001D47EA /* QREncoder.xcodeproj */,
 				2100C5D0163AD0FA00D202E9 /* Client */,
 				2100C5F4163AD0FA00D202E9 /* ClientTests */,
 				2100C5C9163AD0FA00D202E9 /* Frameworks */,
@@ -237,6 +262,15 @@
 			path = ../../ThirdPartyLibraries/AFNetworking/AFNetworking;
 			sourceTree = "<group>";
 		};
+		7E161874163B2398001D47EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7E16187C163B2398001D47EA /* libQREncoder.a */,
+				7E16187E163B2398001D47EA /* QREncoderTest.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -251,6 +285,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7E161881163B23D7001D47EA /* PBXTargetDependency */,
 			);
 			name = Client;
 			productName = Client;
@@ -296,6 +331,12 @@
 			mainGroup = 2100C5BB163AD0FA00D202E9;
 			productRefGroup = 2100C5C7163AD0FA00D202E9 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 7E161874163B2398001D47EA /* Products */;
+					ProjectRef = 7E161873163B2398001D47EA /* QREncoder.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2100C5C5163AD0FA00D202E9 /* Client */,
@@ -303,6 +344,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		7E16187C163B2398001D47EA /* libQREncoder.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libQREncoder.a;
+			remoteRef = 7E16187B163B2398001D47EA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7E16187E163B2398001D47EA /* QREncoderTest.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QREncoderTest.octest;
+			remoteRef = 7E16187D163B2398001D47EA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2100C5C4163AD0FA00D202E9 /* Resources */ = {
@@ -379,6 +437,11 @@
 			isa = PBXTargetDependency;
 			target = 2100C5C5163AD0FA00D202E9 /* Client */;
 			targetProxy = 2100C5F2163AD0FA00D202E9 /* PBXContainerItemProxy */;
+		};
+		7E161881163B23D7001D47EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = QREncoder;
+			targetProxy = 7E161880163B23D7001D47EA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -465,6 +528,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Client/Client-Prefix.pch";
 				INFOPLIST_FILE = "Client/Client-Info.plist";
+				LIBRARY_SEARCH_PATHS = ../../ThirdPartyLibraries/ObjQREncoder/src;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -476,6 +540,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Client/Client-Prefix.pch";
 				INFOPLIST_FILE = "Client/Client-Info.plist";
+				LIBRARY_SEARCH_PATHS = ../../ThirdPartyLibraries/ObjQREncoder/src;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
