@@ -27,7 +27,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-
+    
+    self.api = [[LKXAApi alloc] init];
+    self.api.delegate = self;
+    
+    //Login example
+    
+    [self.api loginWithUser:@"dadederk" andPassword:@"dadederk"];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -103,11 +109,21 @@
     self.qrView.alpha = 1.0;
     [UIView commitAnimations];
 
-    UIImage* image = [QREncoder encode:@"http://www.desfici.com"];
+    UIImage* image = [QREncoder encode:self.token];
 
 	[self.qrImage layer].magnificationFilter = kCAFilterNearest;
     
     [self.qrImage setImage:image];
+}
+
+#pragma mark - LKXAApiDelegate
+
+- (void)requestSucceededWithResponse:(NSDictionary *)response forType:(int)type {
+    
+    if (type == kApiLogin) {
+        self.token = [response objectForKey:@"token"];
+    }
+    
 }
 
 @end

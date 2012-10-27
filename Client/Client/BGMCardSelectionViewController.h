@@ -10,6 +10,8 @@
 #import <QREncoder/QREncoder.h>
 #import <QuartzCore/QuartzCore.h>
 
+#import "LKXAApi.h"
+
 @interface BGMCardSelectionViewController : UIViewController <UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *card1;
@@ -18,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *pinField;
 @property (weak, nonatomic) IBOutlet UIView *qrView;
 @property (weak, nonatomic) IBOutlet UIImageView *qrImage;
+@property (strong, nonatomic)LKXAApi *api;
+@property (strong, nonatomic)NSString *token;
 
 - (IBAction)showQRCode:(id)sender;
 
