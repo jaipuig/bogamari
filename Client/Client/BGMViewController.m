@@ -59,8 +59,19 @@ static const CGFloat kPadding = 10;
     }
     else if (type == kApiLogin) {
         NSString *token = [response objectForKey:@"token"];
-        [self.api clientPaymentWithIdCard:@"508965210364e2559452db05" code:@"5650e6de-abaf-4471-bf95-96491c6fc688" forValue:150.1 withToken:token];
+        [self.api clientCardsListWithToken:token];
     }
+    else if (type == kApiCardsList){
+        /*
+        NSString *idCard = [response objectForKey:@"idCard"];
+        
+        NSLog(@"idCard: ", idCard);
+        
+        [self.api clientPaymentWithIdCard:idCard code:@"5650e6de-abaf-4471-bf95-96491c6fc688" forValue:150.1 withToken:token];
+         */
+    }
+   
+    
     
 }
 

@@ -14,8 +14,23 @@
 
 enum types {
     kApiRegister,
-    kApiLogin
+    kApiLogin,
+    kApiPayment,
+    kApiCardsList,
+    kApiNewCard
     };
+
+//Tipos enumerats per a utilitzar en la funció registerNewCardWithId
+enum mode{
+    CREDIT,
+    DEBIT
+};
+
+enum issuer{
+    VISA_CLASSIC,
+    VISA_GOLD,
+    AMEX        
+};
 
 @protocol LKXAApiDelegate
 
@@ -32,6 +47,8 @@ enum types {
 - (void)loginWithUser:(NSString *)user andPassword:(NSString *)password;
 
 - (void)clientPaymentWithIdCard:(NSString *)idCard code:(NSString *)code forValue:(double) value withToken:(NSString *) token;
-//- (void)commerceBilling:
+- (void)clientCardsListWithToken:(NSString *)token;
+
+- (void)registerNewCardWithId:(NSString *)id number:(NSString *)number holder:(NSString *)holder linkAccount:(NSString *)linkAccount deprecateDate:(NSDate *)deprecateDate securityCode:(NSString *)securityCode mode:(NSString *)mode issuer:(NSString *)issuer creditOptions:(NSDictionary *)creditOptions;
 
 @end
