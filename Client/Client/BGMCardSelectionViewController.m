@@ -58,7 +58,7 @@
     
     CGPoint translatedPoint = [(UIPanGestureRecognizer*)sender locationInView:self.view];
     
-    NSLog(@"%f x %f", translatedPoint.x, translatedPoint.y);
+    //NSLog(@"%f x %f", translatedPoint.x, translatedPoint.y);
     
     if([(UIPanGestureRecognizer*)sender state] == UIGestureRecognizerStateBegan) {
         if (translatedPoint.y < self.card1InitialPosition.y) {
