@@ -33,14 +33,14 @@
 
 @implementation BGMViewController
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    SectionModel *burguers = [[SectionModel alloc] init];
-    burguers.name = @"Burguers";
     
-    self.sections = [[NSMutableArray alloc] initWithObjects:burguers, nil];
+   [self loadSectionModel];
+    //self.sections = [[NSMutableArray alloc] initWithObjects:burguers, nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -147,6 +147,97 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+
+// Funciones del GridView
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    // Return the number of rows in the section.
+    int numItems = 0;
+    
+    if (collectionView == self.productosCollection) {
+        NSIndexPath* selectedSectionIndx = [self.sectionsTable indexPathForSelectedRow];
+        SectionModel* selectedSection = (SectionModel*) [self.sections objectAtIndex:selectedSectionIndx.row];
+        numItems = [selectedSection.productArray count];
+    }
+    
+    return numItems;
+
+
+}
+
+
+
+// Funciones de carga a saco, con pico, pala y sobre piedra dura
+-(void)loadSectionModel
+{
+    self.sections = [[NSMutableArray alloc] init];
+    
+    //--- Section ----//
+    SectionModel* section = [[SectionModel alloc] init];
+    section.name = @"Burguers";
+    //s2.image = ;
+    
+    // Productos de la sección
+    section.productArray = [NSMutableArray alloc];
+    
+    ProductModel* product = [ProductModel alloc];
+    product.name = @"Burguer 1";
+    //product.image = ;
+    [section.productArray addObject:product];
+    
+    product = [ProductModel alloc];
+    product.name = @"Burguer 1";
+    //product.image = ;
+    [section.productArray addObject:product];
+    
+    [self.sections addObject:section];
+    
+    //--- Section ----//
+    section = [[SectionModel alloc] init];
+    section.name = @"Frutas";
+    //s2.image = ;
+    
+    // Productos de la sección
+    section.productArray = [NSMutableArray alloc];
+    
+    product = [ProductModel alloc];
+    product.name = @"Platanos";
+    //product.image = ;
+    [section.productArray addObject:product];
+    
+    product = [ProductModel alloc];
+    product.name = @"Kiwis";
+    //product.image = ;
+    [section.productArray addObject:product];
+    
+    [self.sections addObject:section];
+    
+    
+    //--- Section ----//
+    section = [[SectionModel alloc] init];
+    section.name = @"Verduras";
+    //s2.image = ;
+    
+    // Productos de la sección
+    section.productArray = [NSMutableArray alloc];
+    
+    product = [ProductModel alloc];
+    product.name = @"Lechuga";
+    //product.image = ;
+    [section.productArray addObject:product];
+    
+    product = [ProductModel alloc];
+    product.name = @"Más Verde";
+    //product.image = ;
+    [section.productArray addObject:product];
+    
+    [self.sections addObject:section];
+
+
+    
+        
 }
 
 

@@ -11,13 +11,13 @@
 @interface SectionModel : NSObject{
     NSString* _name;
     UIImage*  _image;
-    NSArray*  _productArray;
+    NSMutableArray*  _productArray;
     
 }
 
 @property (nonatomic) NSString* name;
 @property (nonatomic) UIImage*  image;
-@property (nonatomic) NSArray*  productArray;
+@property (nonatomic) NSMutableArray*  productArray;
 
 
 

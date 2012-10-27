@@ -23,9 +23,9 @@
 		2100C5B2163AD0D800D202E9 /* CommerceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2100C5B1163AD0D800D202E9 /* CommerceTests.m */; };
 		72041490163B5AE5006B6213 /* SectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7204148F163B5AE5006B6213 /* SectionModel.m */; };
 		72041493163B5EF9006B6213 /* ProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 72041492163B5EF9006B6213 /* ProductModel.m */; };
-		7204149E163B62E9006B6213 /* SectionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7204149D163B62E9006B6213 /* SectionsTableViewController.m */; };
 		720414A4163B64EF006B6213 /* BGMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 720414A3163B64EF006B6213 /* BGMAppDelegate.m */; };
 		720414A7163B689B006B6213 /* BGMSectionsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 720414A6163B689B006B6213 /* BGMSectionsCell.m */; };
+		720414AD163B7AA1006B6213 /* BGMCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 720414AC163B7AA1006B6213 /* BGMCollectionViewController.m */; };
 		72A106A5163B14B90012959C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A106A4163B14B90012959C /* AudioToolbox.framework */; };
 		72A106A7163B14C60012959C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A106A6163B14C60012959C /* AVFoundation.framework */; };
 		72A106A9163B14CD0012959C /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A106A8163B14CD0012959C /* CoreVideo.framework */; };
@@ -77,11 +77,11 @@
 		7204148F163B5AE5006B6213 /* SectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SectionModel.m; path = Commerce/SectionModel.m; sourceTree = "<group>"; };
 		72041491163B5EF9006B6213 /* ProductModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductModel.h; path = Commerce/ProductModel.h; sourceTree = "<group>"; };
 		72041492163B5EF9006B6213 /* ProductModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductModel.m; path = Commerce/ProductModel.m; sourceTree = "<group>"; };
-		7204149C163B62E9006B6213 /* SectionsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionsTableViewController.h; sourceTree = "<group>"; };
-		7204149D163B62E9006B6213 /* SectionsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionsTableViewController.m; sourceTree = "<group>"; };
 		720414A3163B64EF006B6213 /* BGMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGMAppDelegate.m; sourceTree = "<group>"; };
 		720414A5163B689B006B6213 /* BGMSectionsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGMSectionsCell.h; sourceTree = "<group>"; };
 		720414A6163B689B006B6213 /* BGMSectionsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGMSectionsCell.m; sourceTree = "<group>"; };
+		720414AB163B7AA1006B6213 /* BGMCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGMCollectionViewController.h; sourceTree = "<group>"; };
+		720414AC163B7AA1006B6213 /* BGMCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGMCollectionViewController.m; sourceTree = "<group>"; };
 		72A106A4163B14B90012959C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		72A106A6163B14C60012959C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		72A106A8163B14CD0012959C /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
@@ -200,10 +200,10 @@
 				2100C59B163AD0D800D202E9 /* BGMViewController.h */,
 				72A106BF163B1C740012959C /* BGMViewController.m */,
 				2100C587163AD0D700D202E9 /* Supporting Files */,
-				7204149C163B62E9006B6213 /* SectionsTableViewController.h */,
-				7204149D163B62E9006B6213 /* SectionsTableViewController.m */,
 				720414A5163B689B006B6213 /* BGMSectionsCell.h */,
 				720414A6163B689B006B6213 /* BGMSectionsCell.m */,
+				720414AB163B7AA1006B6213 /* BGMCollectionViewController.h */,
+				720414AC163B7AA1006B6213 /* BGMCollectionViewController.m */,
 			);
 			path = Commerce;
 			sourceTree = "<group>";
@@ -435,9 +435,9 @@
 				72A106C0163B1C740012959C /* BGMViewController.m in Sources */,
 				72041490163B5AE5006B6213 /* SectionModel.m in Sources */,
 				72041493163B5EF9006B6213 /* ProductModel.m in Sources */,
-				7204149E163B62E9006B6213 /* SectionsTableViewController.m in Sources */,
 				720414A4163B64EF006B6213 /* BGMAppDelegate.m in Sources */,
 				720414A7163B689B006B6213 /* BGMSectionsCell.m in Sources */,
+				720414AD163B7AA1006B6213 /* BGMCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  SectionsTableViewController.h
+//  BGMCollectionViewController.h
 //  Commerce
 //
 //  Created by Josep on 27/10/12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SectionsTableViewController : UITableViewController
+@interface BGMCollectionViewController : UICollectionViewController
 
 @end
