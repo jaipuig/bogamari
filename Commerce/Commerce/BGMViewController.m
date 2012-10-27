@@ -138,6 +138,8 @@
         
         SectionModel *currentSection = [self.sections objectAtIndex:indexPath.row];
         
+        [sectionCell setSelectionStyle:UITableViewCellSelectionStyleGray];
+        
         [sectionCell.title setText:currentSection.name];
         [sectionCell.imageView setImage:currentSection.image];
         

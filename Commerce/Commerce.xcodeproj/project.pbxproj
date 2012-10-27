@@ -41,6 +41,7 @@
 		21BD651C163BA31300418C28 /* ticket.png in Resources */ = {isa = PBXBuildFile; fileRef = 21BD651B163BA31300418C28 /* ticket.png */; };
 		21BD651F163BA37C00418C28 /* finishButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 21BD651E163BA37C00418C28 /* finishButton.png */; };
 		21BD6521163BA54400418C28 /* totalBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 21BD6520163BA54400418C28 /* totalBackground.png */; };
+		21BD652F163BAB5200418C28 /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 21BD652E163BAB5200418C28 /* Default-Landscape@2x~ipad.png */; };
 		72041490163B5AE5006B6213 /* SectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7204148F163B5AE5006B6213 /* SectionModel.m */; };
 		72041493163B5EF9006B6213 /* ProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 72041492163B5EF9006B6213 /* ProductModel.m */; };
 		720414A4163B64EF006B6213 /* BGMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 720414A3163B64EF006B6213 /* BGMAppDelegate.m */; };
@@ -74,7 +75,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2100C57C163AD0D700D202E9 /* Commerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Commerce.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2100C57C163AD0D700D202E9 /* Market.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Market.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2100C580163AD0D700D202E9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2100C582163AD0D700D202E9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2100C584163AD0D700D202E9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -115,6 +116,7 @@
 		21BD651B163BA31300418C28 /* ticket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ticket.png; sourceTree = "<group>"; };
 		21BD651E163BA37C00418C28 /* finishButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = finishButton.png; sourceTree = "<group>"; };
 		21BD6520163BA54400418C28 /* totalBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = totalBackground.png; sourceTree = "<group>"; };
+		21BD652E163BAB5200418C28 /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
 		7204148E163B5AE5006B6213 /* SectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SectionModel.h; path = Commerce/SectionModel.h; sourceTree = "<group>"; };
 		7204148F163B5AE5006B6213 /* SectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SectionModel.m; path = Commerce/SectionModel.m; sourceTree = "<group>"; };
 		72041491163B5EF9006B6213 /* ProductModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductModel.h; path = Commerce/ProductModel.h; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 		2100C571163AD0D700D202E9 = {
 			isa = PBXGroup;
 			children = (
+				21BD652E163BAB5200418C28 /* Default-Landscape@2x~ipad.png */,
 				21BD64CF163B89CF00418C28 /* Fotikos */,
 				7204148C163B5A4F006B6213 /* Models */,
 				72A106CA163B43EF0012959C /* ZBarSDK */,
@@ -211,7 +214,7 @@
 		2100C57D163AD0D700D202E9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2100C57C163AD0D700D202E9 /* Commerce.app */,
+				2100C57C163AD0D700D202E9 /* Market.app */,
 				2100C5A3163AD0D800D202E9 /* CommerceTests.octest */,
 			);
 			name = Products;
@@ -408,7 +411,7 @@
 			);
 			name = Commerce;
 			productName = Commerce;
-			productReference = 2100C57C163AD0D700D202E9 /* Commerce.app */;
+			productReference = 2100C57C163AD0D700D202E9 /* Market.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2100C5A2163AD0D800D202E9 /* CommerceTests */ = {
@@ -491,6 +494,7 @@
 				21BD651C163BA31300418C28 /* ticket.png in Resources */,
 				21BD651F163BA37C00418C28 /* finishButton.png in Resources */,
 				21BD6521163BA54400418C28 /* totalBackground.png in Resources */,
+				21BD652F163BAB5200418C28 /* Default-Landscape@2x~ipad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,7 +656,7 @@
 					"\"$(SRCROOT)/ZBarSDK\"",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Market;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -675,7 +679,7 @@
 					"\"$(SRCROOT)/ZBarSDK\"",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Market;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

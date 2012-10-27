@@ -89,7 +89,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2100C5C6163AD0FA00D202E9 /* Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Client.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2100C5C6163AD0FA00D202E9 /* Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2100C5CA163AD0FA00D202E9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2100C5CC163AD0FA00D202E9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2100C5CE163AD0FA00D202E9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -199,7 +199,7 @@
 		2100C5C7163AD0FA00D202E9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2100C5C6163AD0FA00D202E9 /* Client.app */,
+				2100C5C6163AD0FA00D202E9 /* Wallet.app */,
 				2100C5ED163AD0FA00D202E9 /* ClientTests.octest */,
 			);
 			name = Products;
@@ -357,7 +357,7 @@
 			);
 			name = Client;
 			productName = Client;
-			productReference = 2100C5C6163AD0FA00D202E9 /* Client.app */;
+			productReference = 2100C5C6163AD0FA00D202E9 /* Wallet.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2100C5EC163AD0FA00D202E9 /* ClientTests */ = {
@@ -615,7 +615,7 @@
 				GCC_PREFIX_HEADER = "Client/Client-Prefix.pch";
 				HEADER_SEARCH_PATHS = ../ThirdPartyLibraries/ObjQREncoder/src/Classes;
 				INFOPLIST_FILE = "Client/Client-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Wallet;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -627,7 +627,7 @@
 				GCC_PREFIX_HEADER = "Client/Client-Prefix.pch";
 				HEADER_SEARCH_PATHS = ../ThirdPartyLibraries/ObjQREncoder/src/Classes;
 				INFOPLIST_FILE = "Client/Client-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Wallet;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -121,7 +121,7 @@
 - (void)confirmPayment {
     self.qrView.alpha = 0.0;
     
-    UIAlertView *sureToPay = [[UIAlertView alloc] initWithTitle:@"Confirm payment" message:@"Do you want to confirm a payment of 15.30€ to Mercado Bogamarí?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Accept", nil];
+    UIAlertView *sureToPay = [[UIAlertView alloc] initWithTitle:@"Confirm payment" message:@"Do you want to confirm a payment of 14.80€ to Mercado Bogamarí?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Accept", nil];
     
     [sureToPay show];
 }
