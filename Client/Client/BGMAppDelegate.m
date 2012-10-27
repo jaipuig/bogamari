@@ -13,7 +13,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigationBar"] forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"orangeNavigationBAr"] forBarMetrics:UIBarMetricsDefault];
     NSDictionary *textTitleOptions = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithRed:0.227 green:0.106 blue:0.004 alpha:1.0], UITextAttributeTextColor, UIOffsetMake(0.0, 0.0), UITextAttributeTextShadowOffset, nil];
     NSDictionary *textDisabledTitleOptions = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithRed:0.227 green:0.106 blue:0.004 alpha:0.2], UITextAttributeTextColor, UIOffsetMake(0.0, 0.0), UITextAttributeTextShadowOffset, nil];
     [[UINavigationBar appearance] setTitleTextAttributes:textTitleOptions];
