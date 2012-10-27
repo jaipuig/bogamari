@@ -231,10 +231,7 @@
     [queue addOperationWithBlock:^{
         
         NSString *function = @"operations/card/list";
-       // NSString *parameters = [NSString stringWithFormat:@"?idCard=%@&code=%@&value=%f", idCard, code, value];
-       // NSString *functionWithParameters = [NSString stringWithFormat:@"%@%@", function, token];
-        
-        //NSURL *finalURL = [NSURL URLWithString:[self composeURLWithFunction:functionWithParameters andToken:@""]];
+    
         NSURL *finalURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://finappsapi.bdigital.org/api/2012/%@%@/%@", API_KEY, token, function]];
         
         NSLog(@"finalURL: %@", finalURL);
@@ -336,7 +333,7 @@
 
 //El parámetro location de la API es (double, double)----> Modificarlo!
 //También contiene NSDictionary anidados!!!
-- (void)registerCommerceWithUserName:(NSString *)userName password:(NSString *)password firstname:(NSString *)firstname lastName:(NSString *)lastName addressHolder:(NSDictionary *)addressHolder publicName:(NSString *)publicName AddressCommerce:(NSDictionary *)addressCommerce location:(NSString *) location{
+- (void)registerCommerceWithUserName:(NSString *)userName password:(NSString *)password firstname:(NSString *)firstname lastName:(NSString *)lastName addressHolder:(NSDictionary *)addressHolder publicName:(NSString *)publicName addressCommerce:(NSDictionary *)addressCommerce location:(NSString *) location{
    
     NSString *function = @"access/commerce";
     
@@ -384,12 +381,65 @@
     [operation start];
 
 }
+
+/**
+ * getClientProfileWithId
+ *
+ * Returns the client profile information
+ */
+- (void)getClientProfileWithId:(NSString *)idClient holder:(NSDictionary *)holder accounts:(NSString *)accounts cards:(NSString *)cards{
+//    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+//    
+//    [queue setName:@"Get Client Profile request"];
+//    [queue addOperationWithBlock:^{
+//        
+//        NSString *function = @"operations/";
+//        NSString *parameters = [NSString stringWithFormat:@"?idCard=%@&code=%@&value=%f", idCard, code, value];
+//        NSString *functionWithParameters = [NSString stringWithFormat:@"%@%@", function, parameters];
+//        
+//        //NSURL *finalURL = [NSURL URLWithString:[self composeURLWithFunction:functionWithParameters andToken:@""]];
+//        NSURL *finalURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://finappsapi.bdigital.org/api/2012/%@%@/%@", API_KEY, token, functionWithParameters]];
+//        
+//        NSLog(@"finalURL: %@", finalURL);
+//        
+//        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:finalURL
+//                                                               cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData
+//                                                           timeoutInterval:10];
+//        [request setHTTPMethod: @"GET"];
+//        
+//        NSError *requestError;
+//        NSURLResponse *urlResponse = nil;
+//        NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:&requestError];
+//        
+//        if (requestError) {
+//            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+//                [self.delegate requestFailedWithError:requestError forType:kApiPayment];
+//            }];
+//        }
+//        else {
+//            NSError *error;
+//            
+//            NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+//            
+//            NSLog(@"jsonData: %@", jsonData);
+//            
+//            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+//                if (!error) {
+//                    [self.delegate requestSucceededWithResponse:jsonData forType:kApiPayment];
+//                }
+//                else {
+//                    [self.delegate requestFailedWithError:error forType:kApiPayment];
+//                }
+//            }];
+//        }
+//    }];
+}
+
 #pragma mark - private
 
 /**
- * loginWithUser
+ * composeURLWithFunction
  *
- * Method to obtain a token from a Client or a Commerce
  */
 - (NSString *)composeURLWithFunction:(NSString *)function andToken:(NSString *)token {
     

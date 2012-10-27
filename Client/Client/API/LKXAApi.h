@@ -52,6 +52,8 @@ enum issuer{
 
 - (void)registerNewCardWithId:(NSString *)id number:(NSString *)number holder:(NSString *)holder linkAccount:(NSString *)linkAccount deprecateDate:(NSDate *)deprecateDate securityCode:(NSString *)securityCode mode:(NSString *)mode issuer:(NSString *)issuer creditOptions:(NSDictionary *)creditOptions;
 
-- (void)registerCommerceWithUserName:(NSString *)userName password:(NSString *)password firstname:(NSString *)firstname lastName:(NSString *)lastName AddressHolder:(NSDictionary *)addressHolder publicName:(NSString *)publicName AddressCommerce:(NSDictionary *)addressCommerce location:(NSString *) location;
+- (void)registerCommerceWithUserName:(NSString *)userName password:(NSString *)password firstname:(NSString *)firstname lastName:(NSString *)lastName addressHolder:(NSDictionary *)addressHolder publicName:(NSString *)publicName addressCommerce:(NSDictionary *)addressCommerce location:(NSString *) location;
+
+- (void)getClientProfileWithId:(NSString *)idClient holder:(NSDictionary *)holder accounts:(NSString *)accounts cards:(NSString *)cards;
 
 @end
