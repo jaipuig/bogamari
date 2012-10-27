@@ -14,6 +14,12 @@
 
 @implementation LKXAApi
 
+
+/**
+ * registerUserWithUserName
+ *
+ * Method to create a new Client
+ */
 - (void)registerUserWithUserName:(NSString *)userName password:(NSString *)password name:(NSString *)name lastName:(NSString *)lastName andAddress:(NSDictionary *)address {
     
     NSString *function = @"access/client";
@@ -59,6 +65,11 @@
     [operation start];
 }
 
+/**
+ * loginWithUser
+ *
+ * Method to obtain a token from a Client or a Commerce
+ */
 - (void)loginWithUser:(NSString *)user andPassword:(NSString *)password {
     
     
@@ -151,6 +162,11 @@
      */
 }
 
+/**
+ * clientPaymentWithIdCard
+ *
+ * Returns  an identifier to pay using a specific contracted card (”value” is the money to pay)
+ */
 - (void)clientPaymentWithIdCard:(NSString *)idCard code:(NSString *)code forValue:(double) value withToken:(NSString *) token{
 
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
@@ -202,6 +218,12 @@
 }
 
 #pragma mark Metodes per revisar el seu correcte funcionament
+
+/**
+ * clientCardsListWithToken
+ *
+ * Lists the client’s cards
+ */
 - (void)clientCardsListWithToken:(NSString *)token{
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
     
@@ -252,6 +274,11 @@
 }
 
 
+/**
+ * registerNewCardWithId
+ *
+ * Creates a new card linked to an specific account
+ */
 - (void)registerNewCardWithId:(NSString *)idString number:(NSString *)number holder:(NSString *)holder linkAccount:(NSString *)linkAccount deprecateDate:(NSDate *)deprecateDate securityCode:(NSString *)securityCode mode:(NSString *)mode issuer:(NSString *)issuer creditOptions:(NSDictionary *)creditOptions{
    
     NSString *function = @"operations/card/@me";
@@ -286,22 +313,84 @@
             NSLog(@"Error serializing JSON!");
         }
         else {
-            [self.delegate requestSucceededWithResponse:jsonData forType:kApiRegister];
+            [self.delegate requestSucceededWithResponse:jsonData forType:kApiNewCard];
         }
         
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         
         //NSLog(@"Error: %@", error.description);
         
-        [self.delegate requestFailedWithError:error forType:kApiRegister];
+        [self.delegate requestFailedWithError:error forType:kApiNewCard];
         
     }];
     
     [operation start];
 }
 
+
+/**
+ * registerCommerceWithUserName
+ *
+ * Method to create a new Commerce
+ */
+
+//El parámetro location de la API es (double, double)----> Modificarlo!
+//También contiene NSDictionary anidados!!!
+- (void)registerCommerceWithUserName:(NSString *)userName password:(NSString *)password firstname:(NSString *)firstname lastName:(NSString *)lastName addressHolder:(NSDictionary *)addressHolder publicName:(NSString *)publicName AddressCommerce:(NSDictionary *)addressCommerce location:(NSString *) location{
+   
+    NSString *function = @"access/commerce";
+    
+    NSURL *url = [NSURL URLWithString:[self composeURLWithFunction:@"" andToken:nil]];
+    
+    NSLog(@"BaseURL: %@", url);
+    
+    NSMutableDictionary *parameters = [[NSMutableDictionary alloc] init];
+    [parameters setObject:userName forKey:@"userName"];
+    [parameters setObject:password forKey:@"password"];
+    [parameters setObject:firstname forKey:@"firstname"];
+    [parameters setObject:lastName forKey:@"lastName"];
+    //[parameters setObject:addressHolder forKey:@"addressHolder"];
+    [parameters setObject:publicName forKey:@"publicName"];
+    //[parameters setObject:AddressCommerce forKey:@"AddressCommerce"];
+    [parameters setObject:location forKey:@"location"];
+    
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
+    [httpClient setParameterEncoding:AFJSONParameterEncoding];
+    
+    NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST" path:function parameters:parameters];
+    
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        
+        NSLog(@"JSON: %@", JSON);
+        
+        NSError *errorSerializing;
+        NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:JSON options:kNilOptions error:&errorSerializing];
+        
+        if (errorSerializing) {
+            NSLog(@"Error serializing JSON!");
+        }
+        else {
+            [self.delegate requestSucceededWithResponse:jsonData forType:kApiNewCommerce];
+        }
+        
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        
+        //NSLog(@"Error: %@", error.description);
+        
+        [self.delegate requestFailedWithError:error forType:kApiNewCommerce];
+        
+    }];
+    
+    [operation start];
+
+}
 #pragma mark - private
 
+/**
+ * loginWithUser
+ *
+ * Method to obtain a token from a Client or a Commerce
+ */
 - (NSString *)composeURLWithFunction:(NSString *)function andToken:(NSString *)token {
     
     NSString *url = [NSString stringWithFormat:@"%@%@%@", BASE_URL, API_KEY, function];

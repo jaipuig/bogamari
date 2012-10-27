@@ -17,7 +17,8 @@ enum types {
     kApiLogin,
     kApiPayment,
     kApiCardsList,
-    kApiNewCard
+    kApiNewCard,
+    kApiNewCommerce
     };
 
 //Tipos enumerats per a utilitzar en la funció registerNewCardWithId
@@ -50,5 +51,7 @@ enum issuer{
 - (void)clientCardsListWithToken:(NSString *)token;
 
 - (void)registerNewCardWithId:(NSString *)id number:(NSString *)number holder:(NSString *)holder linkAccount:(NSString *)linkAccount deprecateDate:(NSDate *)deprecateDate securityCode:(NSString *)securityCode mode:(NSString *)mode issuer:(NSString *)issuer creditOptions:(NSDictionary *)creditOptions;
+
+- (void)registerCommerceWithUserName:(NSString *)userName password:(NSString *)password firstname:(NSString *)firstname lastName:(NSString *)lastName AddressHolder:(NSDictionary *)addressHolder publicName:(NSString *)publicName AddressCommerce:(NSDictionary *)addressCommerce location:(NSString *) location;
 
 @end
