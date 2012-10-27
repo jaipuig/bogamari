@@ -37,6 +37,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    SectionModel *burguers = [[SectionModel alloc] init];
+    burguers.name = @"Burguers";
+    
+    self.sections = [[NSMutableArray alloc] initWithObjects:burguers, nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -92,6 +96,57 @@
         
     }
     
+}
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    // Return the number of rows in the section.
+    int numRows = 0;
+    
+    if (tableView == self.sectionsTable) {
+        numRows = [self.sections count];
+    }
+    
+    return numRows;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    
+    BGMSectionsCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    // Configure the cell...
+    
+    if (tableView == self.sectionsTable) {
+        SectionModel *currentSection = [self.sections objectAtIndex:indexPath.row];
+        
+        [cell.title setText:currentSection.name];
+        [cell.imageView setImage:currentSection.image];
+    }
+    
+    return cell;
+}
+
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Navigation logic may go here. Create and push another view controller.
+    /*
+     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+     // ...
+     // Pass the selected object to the new view controller.
+     [self.navigationController pushViewController:detailViewController animated:YES];
+     */
 }
 
 

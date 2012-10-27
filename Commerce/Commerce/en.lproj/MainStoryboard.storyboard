@@ -28,27 +28,86 @@
                                     <action selector="ScanQRButtonTouch:" destination="2" eventType="touchUpInside" id="SWo-xh-tZ2"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="103" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="shP-Vb-cEE">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="2Ov-hi-aFZ"/>
+                                    <constraint firstAttribute="height" constant="460" id="BfO-vh-80U"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="Cell" rowHeight="103" id="cF5-hU-Tug" customClass="BGMSectionsCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="103"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="102"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Section" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZw-gX-iqn">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oLA-N2-Hgx">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="160" id="Ieb-u7-pK4"/>
+                                                        <constraint firstAttribute="height" constant="82" id="rh3-Bs-9Z8"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="xZw-gX-iqn" secondAttribute="bottom" constant="3" id="14T-ZJ-kTf"/>
+                                            <constraint firstItem="xZw-gX-iqn" firstAttribute="leading" secondItem="cF5-hU-Tug" secondAttribute="leading" constant="20" type="default" id="6tW-CC-GWW"/>
+                                            <constraint firstAttribute="trailing" secondItem="xZw-gX-iqn" secondAttribute="trailing" constant="20" type="default" id="OYg-hZ-ILH"/>
+                                            <constraint firstItem="oLA-N2-Hgx" firstAttribute="top" secondItem="cF5-hU-Tug" secondAttribute="top" type="default" id="aWn-SZ-83r"/>
+                                            <constraint firstItem="oLA-N2-Hgx" firstAttribute="centerX" secondItem="xZw-gX-iqn" secondAttribute="centerX" type="default" id="rDa-R3-5Z9"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="picuture" destination="oLA-N2-Hgx" id="Lzr-Oc-mwV"/>
+                                            <outlet property="title" destination="xZw-gX-iqn" id="de8-SI-fO6"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="2" id="3UN-YJ-ylh"/>
+                                    <outlet property="delegate" destination="2" id="fAh-Mn-qQE"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="shP-Vb-cEE" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="0b4-aT-bmh"/>
                             <constraint firstAttribute="bottom" secondItem="Xaf-62-AuJ" secondAttribute="bottom" constant="48" id="2fP-8l-jy4"/>
+                            <constraint firstItem="shP-Vb-cEE" firstAttribute="top" secondItem="5" secondAttribute="top" constant="67" id="Lr3-XK-Czi"/>
                             <constraint firstAttribute="trailing" secondItem="Xaf-62-AuJ" secondAttribute="trailing" constant="273" id="e5i-lf-jAh"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="sectionsTable" destination="shP-Vb-cEE" id="cRx-DP-Fdu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-632" y="-538"/>
+            <point key="canvasLocation" x="-280" y="-408"/>
         </scene>
     </scenes>
     <classes>
+        <class className="BGMSectionsCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BGMSectionsCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="picuture" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="title" candidateClass="UILabel"/>
+            </relationships>
+        </class>
         <class className="BGMViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BGMViewController.h"/>
             <relationships>
                 <relationship kind="action" name="ScanQRButtonTouch:"/>
                 <relationship kind="outlet" name="resultTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="sectionsTable" candidateClass="UITableView"/>
             </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">

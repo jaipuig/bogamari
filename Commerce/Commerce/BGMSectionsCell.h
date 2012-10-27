@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface BGMSectionsCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *picuture;
+@property (weak, nonatomic) IBOutlet UILabel *title;
 
 @end

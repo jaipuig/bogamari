@@ -8,12 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+#import "SectionModel.h"
+#import "BGMSectionsCell.h"
+
 #import "ZBarSDK.h"
 
-@interface BGMViewController : UIViewController <UIImagePickerControllerDelegate,ZBarReaderDelegate>{
+@interface BGMViewController : UIViewController <UIImagePickerControllerDelegate,ZBarReaderDelegate, UITableViewDataSource, UITableViewDelegate>{
     
     IBOutlet UITextView *resultTextView;
 }
+
+@property (strong, nonatomic) NSMutableArray *sections;
+@property (weak, nonatomic) IBOutlet UITableView *sectionsTable;
+
 - (IBAction)ScanQRButtonTouch:(id)sender;
 
 @end

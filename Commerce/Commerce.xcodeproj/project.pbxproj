@@ -11,8 +11,7 @@
 		2100C583163AD0D700D202E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2100C582163AD0D700D202E9 /* Foundation.framework */; };
 		2100C585163AD0D700D202E9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2100C584163AD0D700D202E9 /* CoreGraphics.framework */; };
 		2100C58B163AD0D700D202E9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2100C589163AD0D700D202E9 /* InfoPlist.strings */; };
-		2100C58D163AD0D800D202E9 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2100C58C163AD0D700D202E9 /* main.mm */; };
-		2100C591163AD0D800D202E9 /* BGMAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2100C590163AD0D800D202E9 /* BGMAppDelegate.mm */; };
+		2100C58D163AD0D800D202E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2100C58C163AD0D700D202E9 /* main.m */; };
 		2100C593163AD0D800D202E9 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2100C592163AD0D800D202E9 /* Default.png */; };
 		2100C595163AD0D800D202E9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2100C594163AD0D800D202E9 /* Default@2x.png */; };
 		2100C597163AD0D800D202E9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2100C596163AD0D800D202E9 /* Default-568h@2x.png */; };
@@ -24,6 +23,9 @@
 		2100C5B2163AD0D800D202E9 /* CommerceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2100C5B1163AD0D800D202E9 /* CommerceTests.m */; };
 		72041490163B5AE5006B6213 /* SectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7204148F163B5AE5006B6213 /* SectionModel.m */; };
 		72041493163B5EF9006B6213 /* ProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 72041492163B5EF9006B6213 /* ProductModel.m */; };
+		7204149E163B62E9006B6213 /* SectionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7204149D163B62E9006B6213 /* SectionsTableViewController.m */; };
+		720414A4163B64EF006B6213 /* BGMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 720414A3163B64EF006B6213 /* BGMAppDelegate.m */; };
+		720414A7163B689B006B6213 /* BGMSectionsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 720414A6163B689B006B6213 /* BGMSectionsCell.m */; };
 		72A106A5163B14B90012959C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A106A4163B14B90012959C /* AudioToolbox.framework */; };
 		72A106A7163B14C60012959C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A106A6163B14C60012959C /* AVFoundation.framework */; };
 		72A106A9163B14CD0012959C /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A106A8163B14CD0012959C /* CoreVideo.framework */; };
@@ -31,7 +33,7 @@
 		72A106AD163B15C50012959C /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A106AC163B15C50012959C /* CoreMedia.framework */; };
 		72A106B0163B15D50012959C /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A106AE163B15D50012959C /* AddressBook.framework */; };
 		72A106B1163B15D50012959C /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A106AF163B15D50012959C /* AddressBookUI.framework */; };
-		72A106C0163B1C740012959C /* BGMViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 72A106BF163B1C740012959C /* BGMViewController.mm */; };
+		72A106C0163B1C740012959C /* BGMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A106BF163B1C740012959C /* BGMViewController.m */; };
 		72A106C9163B3CC00012959C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A106C8163B3CC00012959C /* QuartzCore.framework */; };
 		72A106E8163B43EF0012959C /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A106E2163B43EF0012959C /* libzbar.a */; };
 		72A106E9163B43EF0012959C /* zbar-back.png in Resources */ = {isa = PBXBuildFile; fileRef = 72A106E4163B43EF0012959C /* zbar-back.png */; };
@@ -57,10 +59,9 @@
 		2100C584163AD0D700D202E9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2100C588163AD0D700D202E9 /* Commerce-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Commerce-Info.plist"; sourceTree = "<group>"; };
 		2100C58A163AD0D700D202E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2100C58C163AD0D700D202E9 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		2100C58C163AD0D700D202E9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2100C58E163AD0D800D202E9 /* Commerce-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Commerce-Prefix.pch"; sourceTree = "<group>"; };
 		2100C58F163AD0D800D202E9 /* BGMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BGMAppDelegate.h; sourceTree = "<group>"; };
-		2100C590163AD0D800D202E9 /* BGMAppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BGMAppDelegate.mm; sourceTree = "<group>"; };
 		2100C592163AD0D800D202E9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		2100C594163AD0D800D202E9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		2100C596163AD0D800D202E9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -76,6 +77,11 @@
 		7204148F163B5AE5006B6213 /* SectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SectionModel.m; path = Commerce/SectionModel.m; sourceTree = "<group>"; };
 		72041491163B5EF9006B6213 /* ProductModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductModel.h; path = Commerce/ProductModel.h; sourceTree = "<group>"; };
 		72041492163B5EF9006B6213 /* ProductModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductModel.m; path = Commerce/ProductModel.m; sourceTree = "<group>"; };
+		7204149C163B62E9006B6213 /* SectionsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionsTableViewController.h; sourceTree = "<group>"; };
+		7204149D163B62E9006B6213 /* SectionsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionsTableViewController.m; sourceTree = "<group>"; };
+		720414A3163B64EF006B6213 /* BGMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGMAppDelegate.m; sourceTree = "<group>"; };
+		720414A5163B689B006B6213 /* BGMSectionsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGMSectionsCell.h; sourceTree = "<group>"; };
+		720414A6163B689B006B6213 /* BGMSectionsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGMSectionsCell.m; sourceTree = "<group>"; };
 		72A106A4163B14B90012959C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		72A106A6163B14C60012959C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		72A106A8163B14CD0012959C /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
@@ -83,7 +89,7 @@
 		72A106AC163B15C50012959C /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		72A106AE163B15D50012959C /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		72A106AF163B15D50012959C /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
-		72A106BF163B1C740012959C /* BGMViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BGMViewController.mm; sourceTree = "<group>"; };
+		72A106BF163B1C740012959C /* BGMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGMViewController.m; sourceTree = "<group>"; };
 		72A106C8163B3CC00012959C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		72A106CE163B43EF0012959C /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
 		72A106CF163B43EF0012959C /* Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
@@ -189,11 +195,15 @@
 			isa = PBXGroup;
 			children = (
 				2100C58F163AD0D800D202E9 /* BGMAppDelegate.h */,
-				2100C590163AD0D800D202E9 /* BGMAppDelegate.mm */,
+				720414A3163B64EF006B6213 /* BGMAppDelegate.m */,
 				2100C598163AD0D800D202E9 /* MainStoryboard.storyboard */,
 				2100C59B163AD0D800D202E9 /* BGMViewController.h */,
-				72A106BF163B1C740012959C /* BGMViewController.mm */,
+				72A106BF163B1C740012959C /* BGMViewController.m */,
 				2100C587163AD0D700D202E9 /* Supporting Files */,
+				7204149C163B62E9006B6213 /* SectionsTableViewController.h */,
+				7204149D163B62E9006B6213 /* SectionsTableViewController.m */,
+				720414A5163B689B006B6213 /* BGMSectionsCell.h */,
+				720414A6163B689B006B6213 /* BGMSectionsCell.m */,
 			);
 			path = Commerce;
 			sourceTree = "<group>";
@@ -203,7 +213,7 @@
 			children = (
 				2100C588163AD0D700D202E9 /* Commerce-Info.plist */,
 				2100C589163AD0D700D202E9 /* InfoPlist.strings */,
-				2100C58C163AD0D700D202E9 /* main.mm */,
+				2100C58C163AD0D700D202E9 /* main.m */,
 				2100C58E163AD0D800D202E9 /* Commerce-Prefix.pch */,
 				2100C592163AD0D800D202E9 /* Default.png */,
 				2100C594163AD0D800D202E9 /* Default@2x.png */,
@@ -421,11 +431,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2100C58D163AD0D800D202E9 /* main.mm in Sources */,
-				2100C591163AD0D800D202E9 /* BGMAppDelegate.mm in Sources */,
-				72A106C0163B1C740012959C /* BGMViewController.mm in Sources */,
+				2100C58D163AD0D800D202E9 /* main.m in Sources */,
+				72A106C0163B1C740012959C /* BGMViewController.m in Sources */,
 				72041490163B5AE5006B6213 /* SectionModel.m in Sources */,
 				72041493163B5EF9006B6213 /* ProductModel.m in Sources */,
+				7204149E163B62E9006B6213 /* SectionsTableViewController.m in Sources */,
+				720414A4163B64EF006B6213 /* BGMAppDelegate.m in Sources */,
+				720414A7163B689B006B6213 /* BGMSectionsCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
