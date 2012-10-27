@@ -18,7 +18,7 @@
                                     <constraint firstAttribute="width" constant="102" id="Z9S-pj-43O"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Pagar">
+                                <state key="normal" title="Escanear QR">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -192,15 +192,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Xaf-62-AuJ" secondAttribute="trailing" constant="76" id="2zU-Nm-miw"/>
                             <constraint firstItem="BTw-o0-oqH" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="219" id="9N4-dd-VX4"/>
                             <constraint firstItem="9av-Ko-FzK" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" type="default" id="9ky-Bw-FeH"/>
-                            <constraint firstAttribute="bottom" secondItem="Xaf-62-AuJ" secondAttribute="bottom" constant="12" id="AV7-f9-qfK"/>
                             <constraint firstItem="BTw-o0-oqH" firstAttribute="bottom" secondItem="5" secondAttribute="bottom" type="default" id="J7J-Nb-2Q1"/>
                             <constraint firstItem="9av-Ko-FzK" firstAttribute="top" secondItem="5" secondAttribute="top" type="default" id="LF4-Jb-VJC"/>
                             <constraint firstItem="shP-Vb-cEE" firstAttribute="bottom" secondItem="5" secondAttribute="bottom" type="default" id="M6B-EC-0go"/>
                             <constraint firstItem="BTw-o0-oqH" firstAttribute="top" secondItem="5" secondAttribute="top" type="default" id="Ots-eV-T4n"/>
                             <constraint firstItem="shP-Vb-cEE" firstAttribute="top" secondItem="5" secondAttribute="top" type="default" id="Wcu-vu-9aw"/>
+                            <constraint firstAttribute="trailing" secondItem="Xaf-62-AuJ" secondAttribute="trailing" constant="49" id="pZy-J2-vmG"/>
+                            <constraint firstAttribute="bottom" secondItem="Xaf-62-AuJ" secondAttribute="bottom" constant="11" id="q8d-fX-Uf4"/>
                             <constraint firstItem="shP-Vb-cEE" firstAttribute="leading" secondItem="5" secondAttribute="leading" type="default" id="xg5-hZ-jen"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -261,6 +261,9 @@
         </class>
         <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+        <class className="UICollectionViewLayout" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
