@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
 #import "SectionModel.h"
 #import "ProductModel.h"
@@ -27,6 +28,9 @@
 @property (weak, nonatomic) IBOutlet UITableView *sectionsTable;
 @property (weak, nonatomic) IBOutlet UITableView *ticketTable;
 @property (weak, nonatomic) IBOutlet UICollectionView *productosCollection;
+@property (weak, nonatomic) IBOutlet UILabel *totalProducts;
+@property (weak, nonatomic) IBOutlet UILabel *totalPrice;
+@property float totalTicket;
 
 - (IBAction)ScanQRButtonTouch:(id)sender;
 

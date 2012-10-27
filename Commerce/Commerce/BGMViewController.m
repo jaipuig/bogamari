@@ -150,6 +150,8 @@
         
         [ticketCell.name setText:currentSection.name];
         [ticketCell.image setImage:currentSection.image];
+        [ticketCell.image.layer setBorderWidth:2.0];
+        [ticketCell.image.layer setBorderColor:(__bridge CGColorRef)([UIColor grayColor])];
          NSString *priceString = [NSString stringWithFormat:@"%.2f€", currentSection.precio];
         [ticketCell.price setText:priceString];
         
@@ -187,7 +189,7 @@
     }
     else if(tableView == self.ticketTable)
     {
-        height = 80;
+        height = 53;
     }
     
     return height;
@@ -232,6 +234,12 @@
         [self.ticket addObject:currentProduct]; // añadir a compra
         
         [self.ticketTable reloadData];
+        
+        self.totalTicket += currentProduct.precio;
+        
+        [self.totalPrice setText:[NSString stringWithFormat:@"%.2f", self.totalTicket]];
+        
+        self.totalProducts.text = [NSString stringWithFormat:@"%d", [self.totalProducts.text intValue] + 1];
     }
     
 }
