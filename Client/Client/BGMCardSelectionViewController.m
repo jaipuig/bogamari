@@ -114,6 +114,16 @@
 	[self.qrImage layer].magnificationFilter = kCAFilterNearest;
     
     [self.qrImage setImage:image];
+    
+    [NSTimer scheduledTimerWithTimeInterval:8.0 target:self selector:@selector(confirmPayment) userInfo:nil repeats:NO];
+}
+
+- (void)confirmPayment {
+    self.qrView.alpha = 0.0;
+    
+    UIAlertView *sureToPay = [[UIAlertView alloc] initWithTitle:@"Confirm payment" message:@"Do you want to confirm a payment of 15.30€ to Mercado Bogamarí?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Accept", nil];
+    
+    [sureToPay show];
 }
 
 #pragma mark - LKXAApiDelegate

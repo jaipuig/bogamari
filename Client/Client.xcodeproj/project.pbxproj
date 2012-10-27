@@ -38,7 +38,6 @@
 		2100C6C8163B444100D202E9 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2100C6C7163B444100D202E9 /* background@2x.png */; };
 		2100C6D3163B463600D202E9 /* backButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2100C6CD163B463600D202E9 /* backButton@2x.png */; };
 		2100C6D5163B463600D202E9 /* pocket@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2100C6CF163B463600D202E9 /* pocket@2x.png */; };
-		2100C6D6163B463600D202E9 /* navigationBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2100C6D0163B463600D202E9 /* navigationBar@2x.png */; };
 		2100C6D7163B463600D202E9 /* laCaixaBanner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2100C6D1163B463600D202E9 /* laCaixaBanner@2x.png */; };
 		2100C6D8163B463600D202E9 /* textField@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2100C6D2163B463600D202E9 /* textField@2x.png */; };
 		211D7EA4163B5D0000CC5638 /* BGMCardSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 211D7EA3163B5D0000CC5638 /* BGMCardSelectionViewController.m */; };
@@ -48,6 +47,7 @@
 		21BD64BA163B732E00418C28 /* textField.png in Resources */ = {isa = PBXBuildFile; fileRef = 21BD64B9163B732E00418C28 /* textField.png */; };
 		21BD64F2163B8DE600418C28 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 21BD64F1163B8DE600418C28 /* icon.png */; };
 		21BD64F4163B8E6700418C28 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21BD64F3163B8E6700418C28 /* Default-568h@2x.png */; };
+		21BD6508163B8FA300418C28 /* navigationBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21BD6507163B8FA300418C28 /* navigationBar@2x.png */; };
 		21ED1BA0163B49BA0001BF56 /* yellowButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21ED1B9F163B49BA0001BF56 /* yellowButton@2x.png */; };
 		21ED1BA2163B4EEC0001BF56 /* yellowTextField@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21ED1BA1163B4EEC0001BF56 /* yellowTextField@2x.png */; };
 		21ED1BA4163B50F30001BF56 /* barButtonItem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21ED1BA3163B50F30001BF56 /* barButtonItem@2x.png */; };
@@ -137,7 +137,6 @@
 		2100C6C7163B444100D202E9 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
 		2100C6CD163B463600D202E9 /* backButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backButton@2x.png"; sourceTree = "<group>"; };
 		2100C6CF163B463600D202E9 /* pocket@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pocket@2x.png"; sourceTree = "<group>"; };
-		2100C6D0163B463600D202E9 /* navigationBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationBar@2x.png"; sourceTree = "<group>"; };
 		2100C6D1163B463600D202E9 /* laCaixaBanner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "laCaixaBanner@2x.png"; sourceTree = "<group>"; };
 		2100C6D2163B463600D202E9 /* textField@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "textField@2x.png"; sourceTree = "<group>"; };
 		211D7EA2163B5D0000CC5638 /* BGMCardSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGMCardSelectionViewController.h; sourceTree = "<group>"; };
@@ -146,8 +145,9 @@
 		21BD64B2163B701E00418C28 /* card3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card3.png; sourceTree = "<group>"; };
 		21BD64B7163B727B00418C28 /* fadeOut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fadeOut.png; sourceTree = "<group>"; };
 		21BD64B9163B732E00418C28 /* textField.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textField.png; sourceTree = "<group>"; };
-		21BD64F1163B8DE600418C28 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		21BD64F3163B8E6700418C28 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		21BD64F1163B8DE600418C28 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../icon.png; sourceTree = "<group>"; };
+		21BD64F3163B8E6700418C28 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../../Default-568h@2x.png"; sourceTree = "<group>"; };
+		21BD6507163B8FA300418C28 /* navigationBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationBar@2x.png"; sourceTree = "<group>"; };
 		21ED1B9F163B49BA0001BF56 /* yellowButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellowButton@2x.png"; sourceTree = "<group>"; };
 		21ED1BA1163B4EEC0001BF56 /* yellowTextField@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellowTextField@2x.png"; sourceTree = "<group>"; };
 		21ED1BA3163B50F30001BF56 /* barButtonItem@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "barButtonItem@2x.png"; sourceTree = "<group>"; };
@@ -188,8 +188,6 @@
 		2100C5BB163AD0FA00D202E9 = {
 			isa = PBXGroup;
 			children = (
-				21BD64F3163B8E6700418C28 /* Default-568h@2x.png */,
-				21BD64F1163B8DE600418C28 /* icon.png */,
 				7E16189A163B3415001D47EA /* QREncoder.xcodeproj */,
 				2100C5D0163AD0FA00D202E9 /* Client */,
 				2100C5F4163AD0FA00D202E9 /* ClientTests */,
@@ -311,12 +309,14 @@
 		2100C6C6163B443100D202E9 /* Design */ = {
 			isa = PBXGroup;
 			children = (
+				21BD6507163B8FA300418C28 /* navigationBar@2x.png */,
+				21BD64F3163B8E6700418C28 /* Default-568h@2x.png */,
+				21BD64F1163B8DE600418C28 /* icon.png */,
 				21BD64B1163B701E00418C28 /* card2.png */,
 				21BD64B2163B701E00418C28 /* card3.png */,
 				2100C6C7163B444100D202E9 /* background@2x.png */,
 				2100C6CD163B463600D202E9 /* backButton@2x.png */,
 				2100C6CF163B463600D202E9 /* pocket@2x.png */,
-				2100C6D0163B463600D202E9 /* navigationBar@2x.png */,
 				2100C6D1163B463600D202E9 /* laCaixaBanner@2x.png */,
 				2100C6D2163B463600D202E9 /* textField@2x.png */,
 				21ED1B9F163B49BA0001BF56 /* yellowButton@2x.png */,
@@ -443,7 +443,6 @@
 				2100C6C8163B444100D202E9 /* background@2x.png in Resources */,
 				2100C6D3163B463600D202E9 /* backButton@2x.png in Resources */,
 				2100C6D5163B463600D202E9 /* pocket@2x.png in Resources */,
-				2100C6D6163B463600D202E9 /* navigationBar@2x.png in Resources */,
 				2100C6D7163B463600D202E9 /* laCaixaBanner@2x.png in Resources */,
 				2100C6D8163B463600D202E9 /* textField@2x.png in Resources */,
 				21ED1BA0163B49BA0001BF56 /* yellowButton@2x.png in Resources */,
@@ -457,6 +456,7 @@
 				21BD64BA163B732E00418C28 /* textField.png in Resources */,
 				21BD64F2163B8DE600418C28 /* icon.png in Resources */,
 				21BD64F4163B8E6700418C28 /* Default-568h@2x.png in Resources */,
+				21BD6508163B8FA300418C28 /* navigationBar@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
