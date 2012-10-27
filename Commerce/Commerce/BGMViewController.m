@@ -41,7 +41,9 @@
     
    [self loadSectionModel];
     //self.sections = [[NSMutableArray alloc] initWithObjects:burguers, nil];
-    self.products = [[NSMutableArray alloc] init];
+    self.products = [[self.sections objectAtIndex:1] productArray];
+    
+    [self.sectionsTable selectRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
 }
 
 - (void)didReceiveMemoryWarning
@@ -185,6 +187,7 @@
         ProductModel *currentProduct = [self.products objectAtIndex:indexPath.row];
         
         [cell.title setText:currentProduct.name];
+        [cell.picture setImage:currentProduct.image];
     }
     
     return cell;
@@ -221,82 +224,82 @@
     
     product = [ProductModel alloc];
     product.name = @"Bananas";
-    product.image = [UIImage imageNamed:@"bananas"];
+    product.image = [UIImage imageNamed:@"bananas.jpg"];
     [section.productArray addObject:product];
     
     product = [ProductModel alloc];
     product.name = @"Calabacín";
-    product.image = [UIImage imageNamed:@"calabacin"];
+    product.image = [UIImage imageNamed:@"calabacin.jpg"];
     [section.productArray addObject:product];
     
     product = [ProductModel alloc];
     product.name = @"Champiñón";
-    product.image = [UIImage imageNamed:@"champinyon"];
+    product.image = [UIImage imageNamed:@"champinyon.jpg"];
     [section.productArray addObject:product];
     
     product = [ProductModel alloc];
     product.name = @"Chirimoya";
-    product.image = [UIImage imageNamed:@"chirimoya"];
+    product.image = [UIImage imageNamed:@"chirimoya.jpg"];
     [section.productArray addObject:product];
     
     product = [ProductModel alloc];
     product.name = @"Clementinas";
-    product.image = [UIImage imageNamed:@"clementinas"];
+    product.image = [UIImage imageNamed:@"clementinas.jpg"];
     [section.productArray addObject:product];
     
     product = [ProductModel alloc];
     product.name = @"Coco";
-    product.image = [UIImage imageNamed:@"coco"];
+    product.image = [UIImage imageNamed:@"coco.jpg"];
     [section.productArray addObject:product];
     
     product = [ProductModel alloc];
     product.name = @"Endivias";
-    product.image = [UIImage imageNamed:@"endivias"];
+    product.image = [UIImage imageNamed:@"endivia.jpg"];
     [section.productArray addObject:product];
     
     product = [ProductModel alloc];
     product.name = @"Granada";
-    product.image = [UIImage imageNamed:@"granada"];
+    product.image = [UIImage imageNamed:@"granada.jpg"];
     [section.productArray addObject:product];
     
     product = [ProductModel alloc];
     product.name = @"Higos";
-    product.image = [UIImage imageNamed:@"higos"];
+    product.image = [UIImage imageNamed:@"higos.jpg"];
     [section.productArray addObject:product];
     
     product = [ProductModel alloc];
     product.name = @"Judía verde";
-    product.image = [UIImage imageNamed:@"judia"];
+    product.image = [UIImage imageNamed:@"judia.jpg"];
     [section.productArray addObject:product];
     
     product = [ProductModel alloc];
     product.name = @"Lechuga IceWert";
-    product.image = [UIImage imageNamed:@"lechuga"];
+    product.image = [UIImage imageNamed:@"lechuga.jpg"];
     [section.productArray addObject:product];
     
     product = [ProductModel alloc];
     product.name = @"Manzanas";
-    product.image = [UIImage imageNamed:@"manzanas"];
+    product.image = [UIImage imageNamed:@"manzana.jpg"];
     [section.productArray addObject:product];
     
     product = [ProductModel alloc];
     product.name = @"Melocotón rojo";
-    product.image = [UIImage imageNamed:@"melocoton"];
+    product.image = [UIImage imageNamed:@"melocoton.jpg"];
     [section.productArray addObject:product];
     
     product = [ProductModel alloc];
     product.name = @"Melón Galia";
-    product.image = [UIImage imageNamed:@"melon"];
+    product.image = [UIImage imageNamed:@"melon.jpg"];
     [section.productArray addObject:product];
     
     product = [ProductModel alloc];
     product.name = @"Patata blanca";
-    product.image = [UIImage imageNamed:@"patata"];
+    product.image = [UIImage imageNamed:@"patata.jpg"];
     [section.productArray addObject:product];
     
     product = [ProductModel alloc];
-    product.name = @"Pimentón rojo";
-    product.image = [UIImage imageNamed:@"pimenton"];
+    product.name = @"Pimiento rojo";
+    product.image = [UIImage imageNamed:@"pimiento.jpg"];
     [section.productArray addObject:product];
     
     [self.sections addObject:section];
