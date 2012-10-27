@@ -13,9 +13,6 @@
 @interface BGMViewController : UIViewController <UIImagePickerControllerDelegate,ZBarReaderDelegate>{
     
     IBOutlet UITextView *resultTextView;
-    
-    @private
-        NSString* capturedQRInfo; // dnd se guarda la info del qr code cuando se encuentra
 }
 - (IBAction)ScanQRButtonTouch:(id)sender;
 

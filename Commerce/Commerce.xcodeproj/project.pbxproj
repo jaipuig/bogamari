@@ -22,6 +22,8 @@
 		2100C5A7163AD0D800D202E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2100C582163AD0D700D202E9 /* Foundation.framework */; };
 		2100C5AF163AD0D800D202E9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2100C5AD163AD0D800D202E9 /* InfoPlist.strings */; };
 		2100C5B2163AD0D800D202E9 /* CommerceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2100C5B1163AD0D800D202E9 /* CommerceTests.m */; };
+		72041490163B5AE5006B6213 /* SectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7204148F163B5AE5006B6213 /* SectionModel.m */; };
+		72041493163B5EF9006B6213 /* ProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 72041492163B5EF9006B6213 /* ProductModel.m */; };
 		72A106A5163B14B90012959C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A106A4163B14B90012959C /* AudioToolbox.framework */; };
 		72A106A7163B14C60012959C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A106A6163B14C60012959C /* AVFoundation.framework */; };
 		72A106A9163B14CD0012959C /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A106A8163B14CD0012959C /* CoreVideo.framework */; };
@@ -70,6 +72,10 @@
 		2100C5AE163AD0D800D202E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2100C5B0163AD0D800D202E9 /* CommerceTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommerceTests.h; sourceTree = "<group>"; };
 		2100C5B1163AD0D800D202E9 /* CommerceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommerceTests.m; sourceTree = "<group>"; };
+		7204148E163B5AE5006B6213 /* SectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SectionModel.h; path = Commerce/SectionModel.h; sourceTree = "<group>"; };
+		7204148F163B5AE5006B6213 /* SectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SectionModel.m; path = Commerce/SectionModel.m; sourceTree = "<group>"; };
+		72041491163B5EF9006B6213 /* ProductModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductModel.h; path = Commerce/ProductModel.h; sourceTree = "<group>"; };
+		72041492163B5EF9006B6213 /* ProductModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductModel.m; path = Commerce/ProductModel.m; sourceTree = "<group>"; };
 		72A106A4163B14B90012959C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		72A106A6163B14C60012959C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		72A106A8163B14CD0012959C /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
@@ -142,6 +148,7 @@
 		2100C571163AD0D700D202E9 = {
 			isa = PBXGroup;
 			children = (
+				7204148C163B5A4F006B6213 /* Models */,
 				72A106CA163B43EF0012959C /* ZBarSDK */,
 				2100C586163AD0D700D202E9 /* Commerce */,
 				2100C5AA163AD0D800D202E9 /* CommerceTests */,
@@ -222,6 +229,17 @@
 				2100C5AD163AD0D800D202E9 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7204148C163B5A4F006B6213 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7204148E163B5AE5006B6213 /* SectionModel.h */,
+				7204148F163B5AE5006B6213 /* SectionModel.m */,
+				72041491163B5EF9006B6213 /* ProductModel.h */,
+				72041492163B5EF9006B6213 /* ProductModel.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		72A106CA163B43EF0012959C /* ZBarSDK */ = {
@@ -406,6 +424,8 @@
 				2100C58D163AD0D800D202E9 /* main.mm in Sources */,
 				2100C591163AD0D800D202E9 /* BGMAppDelegate.mm in Sources */,
 				72A106C0163B1C740012959C /* BGMViewController.mm in Sources */,
+				72041490163B5AE5006B6213 /* SectionModel.m in Sources */,
+				72041493163B5EF9006B6213 /* ProductModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

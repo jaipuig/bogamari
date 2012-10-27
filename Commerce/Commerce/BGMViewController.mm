@@ -37,8 +37,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
-    capturedQRInfo = nil;
 }
 
 - (void)didReceiveMemoryWarning
@@ -83,16 +81,16 @@
     for(symbol in results)
         hiddenData = [NSString stringWithString:symbol.data];
     
-    if(hiddenData != nil)
-    {
-        NSLog(@"QR decodificado!!! %@",hiddenData);
-        capturedQRInfo = hiddenData;
-    }
     
     // cerrar ventana
     [self dismissViewControllerAnimated:YES completion:nil];
     
-    //
+    if(hiddenData != nil)
+    {
+        NSLog(@"QR decodificado!!! %@",hiddenData);
+        
+        
+    }
     
 }
 
