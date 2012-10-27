@@ -252,7 +252,7 @@
 }
 
 
-- (void)registerNewCardWithId:(NSString *)id number:(NSString *)number holder:(NSString *)holder linkAccount:(NSString *)linkAccount deprecateDate:(NSDate *)deprecateDate securityCode:(NSString *)securityCode mode:(NSString *)mode issuer:(NSString *)issuer creditOptions:(NSDictionary *)creditOptions{
+- (void)registerNewCardWithId:(NSString *)idString number:(NSString *)number holder:(NSString *)holder linkAccount:(NSString *)linkAccount deprecateDate:(NSDate *)deprecateDate securityCode:(NSString *)securityCode mode:(NSString *)mode issuer:(NSString *)issuer creditOptions:(NSDictionary *)creditOptions{
    
     NSString *function = @"operations/card/@me";
     
@@ -298,8 +298,6 @@
     }];
     
     [operation start];
-    
-    
 }
 
 #pragma mark - private
