@@ -21,6 +21,7 @@
 		2100C5A7163AD0D800D202E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2100C582163AD0D700D202E9 /* Foundation.framework */; };
 		2100C5AF163AD0D800D202E9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2100C5AD163AD0D800D202E9 /* InfoPlist.strings */; };
 		2100C5B2163AD0D800D202E9 /* CommerceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2100C5B1163AD0D800D202E9 /* CommerceTests.m */; };
+		21BD64C1163B858B00418C28 /* BGMCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BD64C0163B858B00418C28 /* BGMCollectionCell.m */; };
 		72041490163B5AE5006B6213 /* SectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7204148F163B5AE5006B6213 /* SectionModel.m */; };
 		72041493163B5EF9006B6213 /* ProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 72041492163B5EF9006B6213 /* ProductModel.m */; };
 		720414A4163B64EF006B6213 /* BGMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 720414A3163B64EF006B6213 /* BGMAppDelegate.m */; };
@@ -73,6 +74,8 @@
 		2100C5AE163AD0D800D202E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2100C5B0163AD0D800D202E9 /* CommerceTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommerceTests.h; sourceTree = "<group>"; };
 		2100C5B1163AD0D800D202E9 /* CommerceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommerceTests.m; sourceTree = "<group>"; };
+		21BD64BF163B858B00418C28 /* BGMCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGMCollectionCell.h; sourceTree = "<group>"; };
+		21BD64C0163B858B00418C28 /* BGMCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGMCollectionCell.m; sourceTree = "<group>"; };
 		7204148E163B5AE5006B6213 /* SectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SectionModel.h; path = Commerce/SectionModel.h; sourceTree = "<group>"; };
 		7204148F163B5AE5006B6213 /* SectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SectionModel.m; path = Commerce/SectionModel.m; sourceTree = "<group>"; };
 		72041491163B5EF9006B6213 /* ProductModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductModel.h; path = Commerce/ProductModel.h; sourceTree = "<group>"; };
@@ -202,6 +205,8 @@
 				2100C587163AD0D700D202E9 /* Supporting Files */,
 				720414A5163B689B006B6213 /* BGMSectionsCell.h */,
 				720414A6163B689B006B6213 /* BGMSectionsCell.m */,
+				21BD64BF163B858B00418C28 /* BGMCollectionCell.h */,
+				21BD64C0163B858B00418C28 /* BGMCollectionCell.m */,
 				720414AB163B7AA1006B6213 /* BGMCollectionViewController.h */,
 				720414AC163B7AA1006B6213 /* BGMCollectionViewController.m */,
 			);
@@ -438,6 +443,7 @@
 				720414A4163B64EF006B6213 /* BGMAppDelegate.m in Sources */,
 				720414A7163B689B006B6213 /* BGMSectionsCell.m in Sources */,
 				720414AD163B7AA1006B6213 /* BGMCollectionViewController.m in Sources */,
+				21BD64C1163B858B00418C28 /* BGMCollectionCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

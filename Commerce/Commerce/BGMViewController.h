@@ -11,6 +11,7 @@
 #import "SectionModel.h"
 #import "ProductModel.h"
 #import "BGMSectionsCell.h"
+#import "BGMCollectionCell.h"
 
 #import "ZBarSDK.h"
 
@@ -20,6 +21,7 @@
 }
 
 @property (strong, nonatomic) NSMutableArray *sections;
+@property (strong, nonatomic) NSMutableArray *products;
 @property (weak, nonatomic) IBOutlet UITableView *sectionsTable;
 @property (weak, nonatomic) IBOutlet UITableView *ticketTable;
 @property (weak, nonatomic) IBOutlet UICollectionView *productosCollection;
