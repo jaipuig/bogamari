@@ -13,6 +13,21 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigationBar"] forBarMetrics:UIBarMetricsDefault];
+    NSDictionary *textTitleOptions = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithRed:0.227 green:0.106 blue:0.004 alpha:1.0], UITextAttributeTextColor, UIOffsetMake(0.0, 0.0), UITextAttributeTextShadowOffset, nil];
+    NSDictionary *textDisabledTitleOptions = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithRed:0.227 green:0.106 blue:0.004 alpha:0.2], UITextAttributeTextColor, UIOffsetMake(0.0, 0.0), UITextAttributeTextShadowOffset, nil];
+    [[UINavigationBar appearance] setTitleTextAttributes:textTitleOptions];
+    
+    //[[UIBarButtonItem appearance] setTintColor:[UIColor colorWithRed:1.0 green:0.765 blue:0.118 alpha:1.0]];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:textTitleOptions forState:UIControlStateNormal];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:textDisabledTitleOptions forState:UIControlStateDisabled];
+    
+    UIImage *backButton = [[UIImage imageNamed:@"backButton"]  resizableImageWithCapInsets:UIEdgeInsetsMake(12, 12, 12, 12)];
+    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backButton forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    
+    UIImage *barButtonItem = [[UIImage imageNamed:@"barButtonItem"]  resizableImageWithCapInsets:UIEdgeInsetsMake(12, 12, 12, 12)];
+    [[UIBarButtonItem appearance] setBackgroundImage:barButtonItem forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    
     return YES;
 }
 							

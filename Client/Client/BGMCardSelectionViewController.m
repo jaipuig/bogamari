@@ -1,0 +1,79 @@
+//
+//  BGMCardSelectionViewController.m
+//  Client
+//
+//  Created by Daniel Devesa Derksen-Staats on 27/10/12.
+//  Copyright (c) 2012 bogamari. All rights reserved.
+//
+
+#import "BGMCardSelectionViewController.h"
+
+@interface BGMCardSelectionViewController ()
+
+@end
+
+@implementation BGMCardSelectionViewController
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+	// Do any additional setup after loading the view.
+
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveCard:)];
+    //pan.delegate = self;
+    
+    [pan setMinimumNumberOfTouches:1];
+    [pan setMaximumNumberOfTouches:1];
+    
+    self.card1InitialPosition = self.card1.center;
+    [self.card1 addGestureRecognizer:pan];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void)moveCard:(id)sender {
+    
+    CGPoint translatedPoint = [(UIPanGestureRecognizer*)sender translationInView:self.view];
+    
+    NSLog(@"%f x %f", translatedPoint.x, translatedPoint.y);
+    
+    if([(UIPanGestureRecognizer*)sender state] == UIGestureRecognizerStateBegan) {
+        if (translatedPoint.y < self.card1InitialPosition.y) {
+            [UIView beginAnimations:@"moveCard" context:nil];
+            [UIView setAnimationDuration:0.5];
+            CGPoint newPos = self.card1InitialPosition;
+            newPos.y = translatedPoint.y;
+            self.card1.center = newPos;
+            [UIView commitAnimations];
+        }
+    }
+    
+    if([(UIPanGestureRecognizer*)sender state] == UIGestureRecognizerStateChanged) {
+        if (translatedPoint.y < self.card1InitialPosition.y) {
+            CGPoint newPos = self.card1InitialPosition;
+            newPos.y = translatedPoint.y;
+            self.card1.center = newPos;
+        }
+    }
+    
+    
+}
+
+@end
