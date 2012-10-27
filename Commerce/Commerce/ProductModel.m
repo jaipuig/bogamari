@@ -12,5 +12,6 @@
 
 @synthesize name = _name;
 @synthesize image = _image;
+@synthesize precio = _precio;
 
 @end

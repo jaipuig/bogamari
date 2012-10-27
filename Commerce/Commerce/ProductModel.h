@@ -11,10 +11,13 @@
 @interface ProductModel : NSObject{
     NSString* _name;
     UIImage*  _image;
+    float _precio;
 }
 
 @property (nonatomic) NSString* name;
 @property (nonatomic) UIImage*  image;
+@property (nonatomic) float precio;
+
 
 
 @end

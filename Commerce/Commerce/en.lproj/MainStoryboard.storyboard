@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="11E53" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12C60" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -67,12 +67,65 @@
                                     <outlet property="delegate" destination="2" id="fAh-Mn-qQE"/>
                                 </connections>
                             </tableView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="9av-Ko-FzK">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="71" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="9av-Ko-FzK">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="652" id="cqA-Uu-iIw"/>
                                     <constraint firstAttribute="width" constant="210" id="zi2-Ka-m1t"/>
                                 </constraints>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="Cell" rowHeight="85" id="qc6-PD-bb6" customClass="BGMTicketsCell">
+                                        <rect key="frame" x="0.0" y="22" width="210" height="85"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="210" height="84"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlo-Iw-4Nz">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="117" id="lgd-W4-kjP"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGZ-zu-iL7">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="41" id="07z-2J-3Cb"/>
+                                                        <constraint firstAttribute="height" constant="21" id="T7x-Ge-6py"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="keG-Wc-zzF">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="Fpk-8L-fZN"/>
+                                                        <constraint firstAttribute="width" constant="50" id="QCf-ef-zSz"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="rlo-Iw-4Nz" firstAttribute="top" secondItem="qc6-PD-bb6" secondAttribute="top" constant="12" id="0Lq-lv-chJ"/>
+                                            <constraint firstItem="oGZ-zu-iL7" firstAttribute="top" secondItem="qc6-PD-bb6" secondAttribute="top" constant="34" id="5F1-tE-u7R"/>
+                                            <constraint firstItem="keG-Wc-zzF" firstAttribute="leading" secondItem="qc6-PD-bb6" secondAttribute="leading" constant="6" id="Dv4-cd-YHy"/>
+                                            <constraint firstAttribute="trailing" secondItem="oGZ-zu-iL7" secondAttribute="trailing" constant="14" id="FxS-BV-PTH"/>
+                                            <constraint firstItem="keG-Wc-zzF" firstAttribute="centerY" secondItem="qc6-PD-bb6" secondAttribute="centerY" type="default" id="emg-7l-Sx9"/>
+                                            <constraint firstItem="rlo-Iw-4Nz" firstAttribute="leading" secondItem="qc6-PD-bb6" secondAttribute="leading" constant="76" id="v7l-iv-Xfw"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="image" destination="keG-Wc-zzF" id="Pkn-TI-mBT"/>
+                                            <outlet property="name" destination="rlo-Iw-4Nz" id="fKP-dB-2HJ"/>
+                                            <outlet property="price" destination="oGZ-zu-iL7" id="Hc9-Zj-Mml"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="2" id="gGO-7e-sau"/>
+                                    <outlet property="delegate" destination="2" id="I1p-C1-8sE"/>
+                                </connections>
                             </tableView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BTw-o0-oqH">
                                 <color key="backgroundColor" red="0.95294123888015747" green="0.9490196704864502" blue="0.93725496530532837" alpha="1" colorSpace="deviceRGB"/>
@@ -93,7 +146,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="144" height="144"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="taO-AX-BX4"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="taO-AX-BX4"/>
                                                 <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fB7-vI-BAK">
                                                     <subviews>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zcj-mf-Vbz">
@@ -156,7 +209,7 @@
                     <connections>
                         <outlet property="productosCollection" destination="BTw-o0-oqH" id="VQ9-bC-VJ3"/>
                         <outlet property="sectionsTable" destination="shP-Vb-cEE" id="cRx-DP-Fdu"/>
-                        <outlet property="ticketTable" destination="9av-Ko-FzK" id="FoG-EV-cRi"/>
+                        <outlet property="ticketTable" destination="9av-Ko-FzK" id="d2E-i8-AWV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
@@ -177,6 +230,14 @@
             <relationships>
                 <relationship kind="outlet" name="picuture" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="title" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="BGMTicketsCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BGMTicketsCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="image" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="name" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="price" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="BGMViewController" superclassName="UIViewController">
@@ -200,9 +261,6 @@
         </class>
         <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-        <class className="UICollectionViewLayout" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

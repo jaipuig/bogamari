@@ -43,6 +43,7 @@
 		720414A4163B64EF006B6213 /* BGMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 720414A3163B64EF006B6213 /* BGMAppDelegate.m */; };
 		720414A7163B689B006B6213 /* BGMSectionsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 720414A6163B689B006B6213 /* BGMSectionsCell.m */; };
 		720414AD163B7AA1006B6213 /* BGMCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 720414AC163B7AA1006B6213 /* BGMCollectionViewController.m */; };
+		720414B8163B9418006B6213 /* BGMTicketsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 720414B7163B9418006B6213 /* BGMTicketsCell.m */; };
 		72A106A5163B14B90012959C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A106A4163B14B90012959C /* AudioToolbox.framework */; };
 		72A106A7163B14C60012959C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A106A6163B14C60012959C /* AVFoundation.framework */; };
 		72A106A9163B14CD0012959C /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A106A8163B14CD0012959C /* CoreVideo.framework */; };
@@ -117,6 +118,8 @@
 		720414A6163B689B006B6213 /* BGMSectionsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGMSectionsCell.m; sourceTree = "<group>"; };
 		720414AB163B7AA1006B6213 /* BGMCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGMCollectionViewController.h; sourceTree = "<group>"; };
 		720414AC163B7AA1006B6213 /* BGMCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGMCollectionViewController.m; sourceTree = "<group>"; };
+		720414B6163B9418006B6213 /* BGMTicketsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGMTicketsCell.h; sourceTree = "<group>"; };
+		720414B7163B9418006B6213 /* BGMTicketsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGMTicketsCell.m; sourceTree = "<group>"; };
 		72A106A4163B14B90012959C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		72A106A6163B14C60012959C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		72A106A8163B14CD0012959C /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
@@ -242,6 +245,8 @@
 				21BD64C0163B858B00418C28 /* BGMCollectionCell.m */,
 				720414AB163B7AA1006B6213 /* BGMCollectionViewController.h */,
 				720414AC163B7AA1006B6213 /* BGMCollectionViewController.m */,
+				720414B6163B9418006B6213 /* BGMTicketsCell.h */,
+				720414B7163B9418006B6213 /* BGMTicketsCell.m */,
 			);
 			path = Commerce;
 			sourceTree = "<group>";
@@ -516,6 +521,7 @@
 				720414A7163B689B006B6213 /* BGMSectionsCell.m in Sources */,
 				720414AD163B7AA1006B6213 /* BGMCollectionViewController.m in Sources */,
 				21BD64C1163B858B00418C28 /* BGMCollectionCell.m in Sources */,
+				720414B8163B9418006B6213 /* BGMTicketsCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

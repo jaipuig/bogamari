@@ -42,6 +42,7 @@
    [self loadSectionModel];
     //self.sections = [[NSMutableArray alloc] initWithObjects:burguers, nil];
     self.products = [[self.sections objectAtIndex:1] productArray];
+    self.ticket = [[NSMutableArray alloc] init];
     
     [self.sectionsTable selectRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
 }
@@ -117,6 +118,9 @@
     if (tableView == self.sectionsTable) {
         numRows = [self.sections count];
     }
+    else if (tableView == self.ticketTable) {
+        numRows = [self.ticket count];
+    }
     
     return numRows;
 }
@@ -125,15 +129,31 @@
 {
     static NSString *CellIdentifier = @"Cell";
     
-    BGMSectionsCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell;
     
     // Configure the cell...
     
     if (tableView == self.sectionsTable) {
+        BGMSectionsCell *sectionCell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+        
         SectionModel *currentSection = [self.sections objectAtIndex:indexPath.row];
         
-        [cell.title setText:currentSection.name];
-        [cell.imageView setImage:currentSection.image];
+        [sectionCell.title setText:currentSection.name];
+        [sectionCell.imageView setImage:currentSection.image];
+        
+        cell = sectionCell;
+    }
+    else if (tableView == self.ticketTable) {
+        BGMTicketsCell *ticketCell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+        
+        ProductModel *currentSection = [self.ticket objectAtIndex:indexPath.row];
+        
+        [ticketCell.name setText:currentSection.name];
+        [ticketCell.image setImage:currentSection.image];
+         NSString *priceString = [NSString stringWithFormat:@"%.2f€", currentSection.precio];
+        [ticketCell.price setText:priceString];
+        
+        cell = ticketCell;
     }
     
     return cell;
@@ -158,9 +178,19 @@
     [self.productosCollection reloadData];
 }
 
-- (float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    int height = 0;
     
-    return 45;
+    if (tableView == self.sectionsTable) {
+        height = 45;
+    }
+    else if(tableView == self.ticketTable)
+    {
+        height = 80;
+    }
+    
+    return height;
 }
 
 
@@ -175,6 +205,7 @@
         SectionModel* selectedSection = (SectionModel*) [self.sections objectAtIndex:selectedSectionIndx.row];
         numItems = [selectedSection.productArray count];
     }
+   
     
     return numItems;
 }
@@ -191,6 +222,18 @@
     }
     
     return cell;
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+
+    if ([self.products count] > 0)
+    {
+        ProductModel *currentProduct = [self.products objectAtIndex:indexPath.row];
+        [self.ticket addObject:currentProduct]; // añadir a compra
+        
+        [self.ticketTable reloadData];
+    }
+    
 }
 
 
@@ -225,81 +268,97 @@
     product = [ProductModel alloc];
     product.name = @"Bananas";
     product.image = [UIImage imageNamed:@"bananas.jpg"];
+    product.precio = 5;
     [section.productArray addObject:product];
     
     product = [ProductModel alloc];
     product.name = @"Calabacín";
     product.image = [UIImage imageNamed:@"calabacin.jpg"];
+    product.precio = 2;
     [section.productArray addObject:product];
     
     product = [ProductModel alloc];
     product.name = @"Champiñón";
     product.image = [UIImage imageNamed:@"champinyon.jpg"];
+    product.precio = 1.5;
     [section.productArray addObject:product];
     
     product = [ProductModel alloc];
     product.name = @"Chirimoya";
     product.image = [UIImage imageNamed:@"chirimoya.jpg"];
+    product.precio = 3.45;
     [section.productArray addObject:product];
     
     product = [ProductModel alloc];
     product.name = @"Clementinas";
     product.image = [UIImage imageNamed:@"clementinas.jpg"];
+    product.precio = 5.55;
     [section.productArray addObject:product];
     
     product = [ProductModel alloc];
     product.name = @"Coco";
     product.image = [UIImage imageNamed:@"coco.jpg"];
+    product.precio = 2.34;
     [section.productArray addObject:product];
     
     product = [ProductModel alloc];
     product.name = @"Endivias";
     product.image = [UIImage imageNamed:@"endivia.jpg"];
+    product.precio = 4.25;
     [section.productArray addObject:product];
     
     product = [ProductModel alloc];
     product.name = @"Granada";
     product.image = [UIImage imageNamed:@"granada.jpg"];
+    product.precio = 4.35;
     [section.productArray addObject:product];
     
     product = [ProductModel alloc];
     product.name = @"Higos";
     product.image = [UIImage imageNamed:@"higos.jpg"];
+    product.precio = 2.15;
     [section.productArray addObject:product];
     
     product = [ProductModel alloc];
     product.name = @"Judía verde";
     product.image = [UIImage imageNamed:@"judia.jpg"];
+    product.precio = 2.5;
     [section.productArray addObject:product];
     
     product = [ProductModel alloc];
     product.name = @"Lechuga IceWert";
     product.image = [UIImage imageNamed:@"lechuga.jpg"];
+    product.precio = 4.5;
     [section.productArray addObject:product];
     
     product = [ProductModel alloc];
     product.name = @"Manzanas";
     product.image = [UIImage imageNamed:@"manzana.jpg"];
+    product.precio = 3.45;
     [section.productArray addObject:product];
     
     product = [ProductModel alloc];
     product.name = @"Melocotón rojo";
     product.image = [UIImage imageNamed:@"melocoton.jpg"];
+    product.precio = 3.45;
     [section.productArray addObject:product];
     
     product = [ProductModel alloc];
     product.name = @"Melón Galia";
     product.image = [UIImage imageNamed:@"melon.jpg"];
+    product.precio = 2.50;
     [section.productArray addObject:product];
     
     product = [ProductModel alloc];
     product.name = @"Patata blanca";
     product.image = [UIImage imageNamed:@"patata.jpg"];
+    product.precio = 1.5;
     [section.productArray addObject:product];
     
     product = [ProductModel alloc];
     product.name = @"Pimiento rojo";
     product.image = [UIImage imageNamed:@"pimiento.jpg"];
+    product.precio = 3.0;
     [section.productArray addObject:product];
     
     [self.sections addObject:section];
